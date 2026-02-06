@@ -1,0 +1,5 @@
+{
+  "name": "ai_seo",
+  "version": "2.0.0",
+  "description": "AI-powered SEO blog automation with queue system for daily posting",
+  "main": "index.js",
