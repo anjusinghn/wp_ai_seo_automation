@@ -3,3 +3,8 @@
   "version": "2.0.0",
   "description": "AI-powered SEO blog automation with queue system for daily posting",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test-queue": "./test-queue.sh",
+    "fetch-urls": "curl -X POST http://localhost:8787/fetch-urls",
