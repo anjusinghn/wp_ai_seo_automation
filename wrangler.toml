@@ -1,0 +1,5 @@
+name = "hackernews-worker"
+main = "index.js"
+compatibility_date = "2024-10-07"
+
+[[durable_objects.bindings]]
