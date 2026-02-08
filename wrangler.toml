@@ -3,3 +3,7 @@ main = "index.js"
 compatibility_date = "2024-10-07"
 
 [[durable_objects.bindings]]
+name = "PUBLISH_STATE"
+class_name = "PublishState"
+
+[[migrations]]
