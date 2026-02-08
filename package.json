@@ -8,3 +8,8 @@
     "dev": "node index.js",
     "test-queue": "./test-queue.sh",
     "fetch-urls": "curl -X POST http://localhost:8787/fetch-urls",
+    "queue-status": "curl http://localhost:8787/queue-status",
+    "post-now": "curl -X POST http://localhost:8787/post-from-queue -H 'Content-Type: application/json' -d '{\"publish\":true}'",
+    "post-draft": "curl -X POST http://localhost:8787/post-from-queue -H 'Content-Type: application/json' -d '{\"publish\":false}'"
+  },
+  "keywords": [

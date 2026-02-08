@@ -8,3 +8,8 @@ BASE_URL="http://localhost:8787"
 echo "╔════════════════════════════════════════════════════════════╗"
 echo "║   AI SEO Blog Automation - Test Script                    ║"
 echo "╚════════════════════════════════════════════════════════════╝"
+echo ""
+
+# Function to print section header
+section() {
+    echo ""
