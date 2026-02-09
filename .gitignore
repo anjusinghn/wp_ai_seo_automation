@@ -8,3 +8,8 @@ dist/
 build/
 .wrangler/
 
+# Environment and credentials
+*.env
+.env.*
+secrets.json
+.secrets/
