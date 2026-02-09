@@ -9,3 +9,8 @@ const DEFAULT_STATE = {
   lastPublishResult: null,
   isPublishing: false,
 };
+const JSON_HEADERS = { "content-type": "application/json; charset=utf-8" };
+
+// ----- environment helpers --------------------------------------------------
+function getConfig(env) {
+  const required = [
