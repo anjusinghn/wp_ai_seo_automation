@@ -8,3 +8,8 @@ async function main() {
   }
 
   const url = "https://thehackernews.com/";
+  const payload = {
+    url,
+    formats: ["links", "markdown", "html"],
+    onlyMainContent: false,
+  };
