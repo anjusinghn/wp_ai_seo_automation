@@ -8,3 +8,8 @@ Copy `.env.example` to `.env` and fill in your credentials:
 
 ```bash
 cp .env.example .env
+nano .env  # or use your preferred editor
+```
+
+Required variables:
+- `FIRECRAWL_API_KEY` - Get from https://firecrawl.dev
