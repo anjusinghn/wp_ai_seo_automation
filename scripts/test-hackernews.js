@@ -13,3 +13,8 @@ async function main() {
     formats: ["links", "markdown", "html"],
     onlyMainContent: false,
   };
+
+  const res = await fetch("https://api.firecrawl.dev/v1/scrape", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${FIRECRAWL_API_KEY}`,
