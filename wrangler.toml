@@ -11,3 +11,7 @@ tag = "v1"
 new_sqlite_classes = ["PublishState"]
 
 [triggers]
+crons = ["30 18 * * *"] # 00:00 IST daily (UTC+05:30)
+
+[vars]
+HTTP_USER_AGENT = "Mozilla/5.0 (compatible; HackerNewsWorker/1.0)"
