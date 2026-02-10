@@ -14,3 +14,8 @@ const JSON_HEADERS = { "content-type": "application/json; charset=utf-8" };
 // ----- environment helpers --------------------------------------------------
 function getConfig(env) {
   const required = [
+    "FIRECRAWL_API_KEY",
+    "GROQ_API_KEY",
+    "WP_SITE_URL",
+    "WP_USER",
+    "WP_APP_PASSWORD",
