@@ -13,3 +13,8 @@
     "post-draft": "curl -X POST http://localhost:8787/post-from-queue -H 'Content-Type: application/json' -d '{\"publish\":false}'"
   },
   "keywords": [
+    "seo",
+    "automation",
+    "blog",
+    "wordpress",
+    "ai",
