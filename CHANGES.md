@@ -18,3 +18,8 @@ SecurityWeek extract failed: Firecrawl extract 400 BAD_REQUEST
 
 ### 1. Queue System (FIFO)
 - URLs are stored in `url_queue.json`
+- First In, First Out ordering
+- Automatically refetches when empty
+- Persistent storage between restarts
+
+### 2. URL Selection Logic
