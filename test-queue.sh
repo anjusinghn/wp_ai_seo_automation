@@ -18,3 +18,8 @@ section() {
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 }
 
+# Check if server is running
+section "1. Health Check"
+echo "GET $BASE_URL/healthz"
+curl -s $BASE_URL/healthz
+echo ""
