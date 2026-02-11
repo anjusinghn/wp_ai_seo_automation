@@ -13,3 +13,8 @@ build/
 .env.*
 secrets.json
 .secrets/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
