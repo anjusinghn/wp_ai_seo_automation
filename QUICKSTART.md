@@ -18,3 +18,8 @@ Required variables:
 - `WP_USER` - Your WordPress username
 - `WP_APP_PASSWORD` - WordPress Application Password (not regular password!)
 
+### Creating WordPress Application Password
+
+1. Log into WordPress admin
+2. Go to Users → Profile
+3. Scroll to "Application Passwords"
