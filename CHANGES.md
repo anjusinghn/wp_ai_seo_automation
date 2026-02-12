@@ -23,3 +23,8 @@ SecurityWeek extract failed: Firecrawl extract 400 BAD_REQUEST
 - Persistent storage between restarts
 
 ### 2. URL Selection Logic
+- Scrapes SecurityWeek homepage
+- Extracts URLs at positions **5-13** (9 URLs total)
+- Logs all selected URLs for visibility
+- Skips the first 4 URLs (typically ads or sticky posts)
+
