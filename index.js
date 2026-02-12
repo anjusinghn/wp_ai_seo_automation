@@ -19,3 +19,8 @@ function getConfig(env) {
     "WP_SITE_URL",
     "WP_USER",
     "WP_APP_PASSWORD",
+  ];
+  for (const key of required) {
+    const value = env[key];
+    if (typeof value !== "string" || value.trim() === "") {
+      throw new Error(`Missing required environment variable ${key}`);
