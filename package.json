@@ -23,3 +23,8 @@
     "queue",
     "scheduler"
   ],
+  "author": "kaizen",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
