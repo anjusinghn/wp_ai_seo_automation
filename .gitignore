@@ -18,3 +18,7 @@ secrets.json
 *.crt
 *.p12
 *.pfx
+
+# Wrangler KV/Durable Object dumps
+kv-export.json
+do-state.json
