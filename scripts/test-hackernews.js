@@ -23,3 +23,7 @@ async function main() {
     body: JSON.stringify(payload),
   });
 
+  const text = await res.text();
+  console.log(`HTTP ${res.status}`);
+
+  if (!res.ok) {
