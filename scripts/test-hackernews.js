@@ -27,3 +27,8 @@ async function main() {
   console.log(`HTTP ${res.status}`);
 
   if (!res.ok) {
+    console.log(text.slice(0, 500));
+    throw new Error(`Firecrawl scrape failed with status ${res.status}`);
+  }
+
+  let json;
