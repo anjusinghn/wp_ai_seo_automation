@@ -23,3 +23,8 @@ Required variables:
 1. Log into WordPress admin
 2. Go to Users → Profile
 3. Scroll to "Application Passwords"
+4. Enter a name (e.g., "AI SEO Bot")
+5. Click "Add New Application Password"
+6. Copy the generated password to your `.env` file
+
+## Step 2: Start the Server

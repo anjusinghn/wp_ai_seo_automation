@@ -24,3 +24,8 @@ function getConfig(env) {
     const value = env[key];
     if (typeof value !== "string" || value.trim() === "") {
       throw new Error(`Missing required environment variable ${key}`);
+    }
+  }
+  return {
+    firecrawlApiKey: env.FIRECRAWL_API_KEY,
+    groqApiKey: env.GROQ_API_KEY,
