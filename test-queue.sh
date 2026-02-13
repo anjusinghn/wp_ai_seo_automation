@@ -28,3 +28,8 @@ echo ""
 section "2. Queue Status"
 echo "GET $BASE_URL/queue-status"
 curl -s $BASE_URL/queue-status | jq '.' 2>/dev/null || curl -s $BASE_URL/queue-status
+echo ""
+
+# Fetch URLs
+section "3. Fetch URLs from SecurityWeek (URLs 5-13)"
+echo "POST $BASE_URL/fetch-urls"
