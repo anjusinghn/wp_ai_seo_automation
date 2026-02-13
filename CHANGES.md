@@ -28,3 +28,8 @@ SecurityWeek extract failed: Firecrawl extract 400 BAD_REQUEST
 - Logs all selected URLs for visibility
 - Skips the first 4 URLs (typically ads or sticky posts)
 
+### 3. Daily Automated Posting
+- Runs continuously as a worker
+- Checks every hour if it's time to post
+- Posts at configured hour (default: 10 AM)
+- Only posts once per day
