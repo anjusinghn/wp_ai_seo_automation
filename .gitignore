@@ -22,3 +22,8 @@ secrets.json
 # Wrangler KV/Durable Object dumps
 kv-export.json
 do-state.json
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
