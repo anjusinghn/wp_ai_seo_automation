@@ -33,3 +33,8 @@ echo ""
 # Fetch URLs
 section "3. Fetch URLs from SecurityWeek (URLs 5-13)"
 echo "POST $BASE_URL/fetch-urls"
+read -p "Do you want to fetch URLs? (y/n): " -n 1 -r
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    curl -s -X POST $BASE_URL/fetch-urls | jq '.' 2>/dev/null || curl -s -X POST $BASE_URL/fetch-urls
+    echo ""
