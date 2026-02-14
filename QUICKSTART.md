@@ -33,3 +33,8 @@ Required variables:
 node index.js
 ```
 
+You should see:
+
+```
+╔════════════════════════════════════════════════════════════╗
+║   🚀 AI SEO Blog Automation Server                         ║
