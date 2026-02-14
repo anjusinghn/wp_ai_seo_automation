@@ -34,3 +34,8 @@ function getConfig(env) {
     wpPassword: env.WP_APP_PASSWORD,
     groqModel: (env.GROQ_MODEL && env.GROQ_MODEL.trim()) || "openai/gpt-oss-120b",
     userAgent: env.HTTP_USER_AGENT || DEFAULT_USER_AGENT,
+  };
+}
+
+// ----- common helpers -------------------------------------------------------
+const pickFirstNonEmpty = (...values) => {
