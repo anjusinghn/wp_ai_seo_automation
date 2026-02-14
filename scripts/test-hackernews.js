@@ -32,3 +32,8 @@ async function main() {
   }
 
   let json;
+  try {
+    json = JSON.parse(text);
+  } catch (err) {
+    console.error("Response was not valid JSON");
+    console.error(text.slice(0, 500));
