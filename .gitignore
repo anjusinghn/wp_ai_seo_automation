@@ -32,3 +32,8 @@ temp/
 Thumbs.db
 
 # Large media
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
