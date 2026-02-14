@@ -29,3 +29,8 @@ function getConfig(env) {
   return {
     firecrawlApiKey: env.FIRECRAWL_API_KEY,
     groqApiKey: env.GROQ_API_KEY,
+    wpSiteUrl: env.WP_SITE_URL,
+    wpUser: env.WP_USER,
+    wpPassword: env.WP_APP_PASSWORD,
+    groqModel: (env.GROQ_MODEL && env.GROQ_MODEL.trim()) || "openai/gpt-oss-120b",
+    userAgent: env.HTTP_USER_AGENT || DEFAULT_USER_AGENT,
