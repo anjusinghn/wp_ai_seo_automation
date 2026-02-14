@@ -28,3 +28,8 @@ Required variables:
 6. Copy the generated password to your `.env` file
 
 ## Step 2: Start the Server
+
+```bash
+node index.js
+```
+
