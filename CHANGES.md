@@ -33,3 +33,8 @@ SecurityWeek extract failed: Firecrawl extract 400 BAD_REQUEST
 - Checks every hour if it's time to post
 - Posts at configured hour (default: 10 AM)
 - Only posts once per day
+- Automatically pulls from queue
+
+### 4. New API Endpoints
+
+#### `GET /queue-status`
