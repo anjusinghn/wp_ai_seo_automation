@@ -37,3 +37,8 @@ async function main() {
   } catch (err) {
     console.error("Response was not valid JSON");
     console.error(text.slice(0, 500));
+    throw err;
+  }
+
+  const links = Array.isArray(json.links) ? json.links : [];
+  console.log(`links count: ${links.length}`);
