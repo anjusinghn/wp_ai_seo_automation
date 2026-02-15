@@ -38,3 +38,8 @@ SecurityWeek extract failed: Firecrawl extract 400 BAD_REQUEST
 ### 4. New API Endpoints
 
 #### `GET /queue-status`
+Check the current queue:
+```bash
+curl http://localhost:8787/queue-status
+```
+
