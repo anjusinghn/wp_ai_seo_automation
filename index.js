@@ -39,3 +39,8 @@ function getConfig(env) {
 
 // ----- common helpers -------------------------------------------------------
 const pickFirstNonEmpty = (...values) => {
+  for (const value of values) {
+    if (typeof value !== "string") continue;
+    const trimmed = value.trim();
+    if (trimmed.length > 0) return trimmed;
+  }
