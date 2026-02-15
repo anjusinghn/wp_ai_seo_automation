@@ -38,3 +38,8 @@ echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     curl -s -X POST $BASE_URL/fetch-urls | jq '.' 2>/dev/null || curl -s -X POST $BASE_URL/fetch-urls
     echo ""
+fi
+
+# Check queue status again
+section "4. Queue Status After Fetch"
+echo "GET $BASE_URL/queue-status"
