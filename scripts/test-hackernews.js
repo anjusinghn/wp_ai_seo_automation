@@ -42,3 +42,8 @@ async function main() {
 
   const links = Array.isArray(json.links) ? json.links : [];
   console.log(`links count: ${links.length}`);
+  console.log("top-level keys:", Object.keys(json));
+  if (Array.isArray(json.data)) {
+    console.log(`data array length: ${json.data.length}`);
+    if (json.data.length > 0) {
+      console.log("data[0] keys:", Object.keys(json.data[0]));
