@@ -43,3 +43,8 @@ You should see:
 ║   Daily Post Time: 10:00                                   ║
 ...
 ```
+
+## Step 3: Populate the Queue
+
+In a new terminal, fetch URLs from SecurityWeek:
+
