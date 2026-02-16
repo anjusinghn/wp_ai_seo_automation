@@ -43,3 +43,8 @@ fi
 # Check queue status again
 section "4. Queue Status After Fetch"
 echo "GET $BASE_URL/queue-status"
+curl -s $BASE_URL/queue-status | jq '.queue | {count, lastFetched, isEmpty}' 2>/dev/null || curl -s $BASE_URL/queue-status
+echo ""
+
+# Post from queue
+section "5. Post from Queue (On-Demand)"
