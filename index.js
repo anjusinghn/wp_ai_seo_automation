@@ -44,3 +44,8 @@ const pickFirstNonEmpty = (...values) => {
     const trimmed = value.trim();
     if (trimmed.length > 0) return trimmed;
   }
+  return "";
+};
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
