@@ -43,3 +43,8 @@ Check the current queue:
 curl http://localhost:8787/queue-status
 ```
 
+Response:
+```json
+{
+  "ok": true,
+  "queue": {
