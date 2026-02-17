@@ -48,3 +48,8 @@ echo ""
 
 # Post from queue
 section "5. Post from Queue (On-Demand)"
+echo "POST $BASE_URL/post-from-queue"
+read -p "Do you want to post an article? (y/n): " -n 1 -r
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    read -p "Publish or Draft? (publish/draft): " status

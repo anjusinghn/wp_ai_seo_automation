@@ -48,3 +48,8 @@ Response:
 {
   "ok": true,
   "queue": {
+    "count": 9,
+    "urls": [...],
+    "lastFetched": "2025-10-08T10:00:00.000Z",
+    "isEmpty": false
+  }
