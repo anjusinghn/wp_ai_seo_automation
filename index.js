@@ -49,3 +49,8 @@ const pickFirstNonEmpty = (...values) => {
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+const getISTComponents = (date = new Date()) => {
+  const istDate = new Date(date.getTime() + IST_OFFSET_MS);
+  const iso = istDate.toISOString();
+  const dateKey = iso.split("T")[0];
+  const hour = istDate.getUTCHours();
