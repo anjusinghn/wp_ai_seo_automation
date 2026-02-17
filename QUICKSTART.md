@@ -48,3 +48,8 @@ You should see:
 
 In a new terminal, fetch URLs from SecurityWeek:
 
+```bash
+curl -X POST http://localhost:8787/fetch-urls
+```
+
+This will scrape SecurityWeek and add URLs 5-13 to your queue (9 URLs total).
