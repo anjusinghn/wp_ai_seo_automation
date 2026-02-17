@@ -53,3 +53,8 @@ Response:
     "lastFetched": "2025-10-08T10:00:00.000Z",
     "isEmpty": false
   }
+}
+```
+
+#### `POST /fetch-urls`
+Manually fetch URLs from SecurityWeek:

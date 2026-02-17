@@ -53,3 +53,8 @@ read -p "Do you want to post an article? (y/n): " -n 1 -r
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     read -p "Publish or Draft? (publish/draft): " status
+    if [[ $status == "draft" ]]; then
+        curl -s -X POST $BASE_URL/post-from-queue \
+            -H "Content-Type: application/json" \
+            -d '{"publish": false}' | jq '.' 2>/dev/null || curl -s -X POST $BASE_URL/post-from-queue -H "Content-Type: application/json" -d '{"publish": false}'
+    else
