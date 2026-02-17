@@ -47,3 +47,8 @@ async function main() {
     console.log(`data array length: ${json.data.length}`);
     if (json.data.length > 0) {
       console.log("data[0] keys:", Object.keys(json.data[0]));
+      const docLinks = Array.isArray(json.data[0].links) ? json.data[0].links : [];
+      console.log(`data[0].links count: ${docLinks.length}`);
+      const docMetadata = json.data[0].metadata;
+      if (docMetadata) {
+        console.log("data[0].metadata keys:", Object.keys(docMetadata));
