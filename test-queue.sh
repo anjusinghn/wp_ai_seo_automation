@@ -58,3 +58,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
             -H "Content-Type: application/json" \
             -d '{"publish": false}' | jq '.' 2>/dev/null || curl -s -X POST $BASE_URL/post-from-queue -H "Content-Type: application/json" -d '{"publish": false}'
     else
+        curl -s -X POST $BASE_URL/post-from-queue \
+            -H "Content-Type: application/json" \
+            -d '{"publish": true}' | jq '.' 2>/dev/null || curl -s -X POST $BASE_URL/post-from-queue -H "Content-Type: application/json" -d '{"publish": true}'
+    fi
+    echo ""
