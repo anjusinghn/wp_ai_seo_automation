@@ -58,3 +58,8 @@ Response:
 
 #### `POST /fetch-urls`
 Manually fetch URLs from SecurityWeek:
+```bash
+curl -X POST http://localhost:8787/fetch-urls
+```
+
+Response:
