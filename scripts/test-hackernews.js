@@ -52,3 +52,7 @@ async function main() {
       const docMetadata = json.data[0].metadata;
       if (docMetadata) {
         console.log("data[0].metadata keys:", Object.keys(docMetadata));
+      }
+    }
+  } else {
+    console.log("data is not an array:", typeof json.data);
