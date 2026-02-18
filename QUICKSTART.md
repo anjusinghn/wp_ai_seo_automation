@@ -53,3 +53,8 @@ curl -X POST http://localhost:8787/fetch-urls
 ```
 
 This will scrape SecurityWeek and add URLs 5-13 to your queue (9 URLs total).
+
+## Step 4: Test Posting
+
+Post your first article:
+
