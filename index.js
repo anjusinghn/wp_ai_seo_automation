@@ -54,3 +54,8 @@ const getISTComponents = (date = new Date()) => {
   const iso = istDate.toISOString();
   const dateKey = iso.split("T")[0];
   const hour = istDate.getUTCHours();
+  const minute = istDate.getUTCMinutes();
+  return { dateKey, hour, minute };
+};
+
+function normalizeDomainArticleUrl(rawUrl, { domain, requireHtmlExtension = false }) {
