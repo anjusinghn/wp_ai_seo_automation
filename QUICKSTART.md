@@ -62,3 +62,8 @@ Post your first article:
 # As a draft (to review first)
 curl -X POST http://localhost:8787/post-from-queue \
   -H "Content-Type: application/json" \
+  -d '{"publish": false}'
+
+# Or publish immediately
+curl -X POST http://localhost:8787/post-from-queue \
+  -H "Content-Type: application/json" \
