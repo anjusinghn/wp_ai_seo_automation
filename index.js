@@ -64,3 +64,8 @@ function normalizeDomainArticleUrl(rawUrl, { domain, requireHtmlExtension = fals
   if (working === "") return null;
 
   const match = working.match(/https?:\/\/[^\s"'()]+/i);
+  if (match) working = match[0];
+
+  if (requireHtmlExtension) {
+    const lower = working.toLowerCase();
+    const htmlIndex = lower.indexOf(".html");

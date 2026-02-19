@@ -61,3 +61,8 @@ async function main() {
     const articleMatches = [
       ...dataString.matchAll(
         /(https?:\/\/(?:www\.)?thehackernews\.com\/[^\s"'()]+?\.html)/gi,
+      ),
+    ];
+    const cleaned = [];
+    const seen = new Set();
+    for (const match of articleMatches) {
