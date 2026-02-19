@@ -68,3 +68,8 @@ fi
 # Final queue status
 section "6. Final Queue Status"
 echo "GET $BASE_URL/queue-status"
+curl -s $BASE_URL/queue-status | jq '.queue | {count, isEmpty}' 2>/dev/null || curl -s $BASE_URL/queue-status
+echo ""
+
+echo ""
+echo "╔════════════════════════════════════════════════════════════╗"
