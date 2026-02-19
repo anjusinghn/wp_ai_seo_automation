@@ -63,3 +63,8 @@ curl -X POST http://localhost:8787/fetch-urls
 ```
 
 Response:
+```json
+{
+  "ok": true,
+  "message": "Added 9 URLs to queue",
+  "queueCount": 9,
