@@ -68,3 +68,8 @@ Response:
   "ok": true,
   "message": "Added 9 URLs to queue",
   "queueCount": 9,
+  "urls": [...]
+}
+```
+
+#### `POST /post-from-queue`
