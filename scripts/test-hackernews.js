@@ -56,3 +56,8 @@ async function main() {
     }
   } else {
     console.log("data is not an array:", typeof json.data);
+    const dataString = JSON.stringify(json.data, null, 2);
+    console.log("data preview:", dataString.slice(0, 1200));
+    const articleMatches = [
+      ...dataString.matchAll(
+        /(https?:\/\/(?:www\.)?thehackernews\.com\/[^\s"'()]+?\.html)/gi,
