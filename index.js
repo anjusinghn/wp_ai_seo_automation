@@ -59,3 +59,8 @@ const getISTComponents = (date = new Date()) => {
 };
 
 function normalizeDomainArticleUrl(rawUrl, { domain, requireHtmlExtension = false }) {
+  if (!rawUrl || typeof rawUrl !== "string") return null;
+  let working = rawUrl.trim();
+  if (working === "") return null;
+
+  const match = working.match(/https?:\/\/[^\s"'()]+/i);
