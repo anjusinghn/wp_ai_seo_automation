@@ -58,3 +58,7 @@ This will scrape SecurityWeek and add URLs 5-13 to your queue (9 URLs total).
 
 Post your first article:
 
+```bash
+# As a draft (to review first)
+curl -X POST http://localhost:8787/post-from-queue \
+  -H "Content-Type: application/json" \

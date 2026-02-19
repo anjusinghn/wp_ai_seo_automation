@@ -63,3 +63,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
             -d '{"publish": true}' | jq '.' 2>/dev/null || curl -s -X POST $BASE_URL/post-from-queue -H "Content-Type: application/json" -d '{"publish": true}'
     fi
     echo ""
+fi
+
+# Final queue status
+section "6. Final Queue Status"
+echo "GET $BASE_URL/queue-status"
