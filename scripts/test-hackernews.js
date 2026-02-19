@@ -66,3 +66,8 @@ async function main() {
     const cleaned = [];
     const seen = new Set();
     for (const match of articleMatches) {
+      const normalized = normalizeArticleUrl(match[1]);
+      if (normalized && !seen.has(normalized)) {
+        seen.add(normalized);
+        cleaned.push(normalized);
+      }
