@@ -76,3 +76,8 @@ async function main() {
       (url) =>
         /\d{4}\/\d{2}\//.test(new URL(url).pathname) &&
         !url.includes("/search/") &&
+        !url.includes("/label/"),
+    );
+    console.log(`found ${articlesOnly.length} article-style URLs in data after cleanup`);
+    console.log("sample article URLs:", articlesOnly.slice(0, 10));
+    if (typeof json.data.markdown === "string") {
