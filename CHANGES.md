@@ -73,3 +73,8 @@ Response:
 ```
 
 #### `POST /post-from-queue`
+Post one article from the queue on demand:
+```bash
+# Publish
+curl -X POST http://localhost:8787/post-from-queue \
+  -H "Content-Type: application/json" \
