@@ -67,3 +67,8 @@ curl -X POST http://localhost:8787/post-from-queue \
 # Or publish immediately
 curl -X POST http://localhost:8787/post-from-queue \
   -H "Content-Type: application/json" \
+  -d '{"publish": true}'
+```
+
+## Step 5: Check Queue Status
+
