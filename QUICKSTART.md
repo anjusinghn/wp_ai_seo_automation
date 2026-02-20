@@ -72,3 +72,8 @@ curl -X POST http://localhost:8787/post-from-queue \
 
 ## Step 5: Check Queue Status
 
+```bash
+curl http://localhost:8787/queue-status
+```
+
+## That's It!

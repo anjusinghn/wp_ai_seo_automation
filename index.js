@@ -74,3 +74,8 @@ function normalizeDomainArticleUrl(rawUrl, { domain, requireHtmlExtension = fals
   }
 
   try {
+    const absolute = new URL(working, domain).toString();
+    if (requireHtmlExtension && !absolute.toLowerCase().endsWith(".html")) return null;
+    return absolute;
+  } catch (_) {
+    return null;
