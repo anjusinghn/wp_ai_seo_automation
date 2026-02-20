@@ -78,3 +78,8 @@ Post one article from the queue on demand:
 # Publish
 curl -X POST http://localhost:8787/post-from-queue \
   -H "Content-Type: application/json" \
+  -d '{"publish": true}'
+
+# Draft
+curl -X POST http://localhost:8787/post-from-queue \
+  -H "Content-Type: application/json" \
