@@ -71,3 +71,8 @@ async function main() {
         seen.add(normalized);
         cleaned.push(normalized);
       }
+    }
+    const articlesOnly = cleaned.filter(
+      (url) =>
+        /\d{4}\/\d{2}\//.test(new URL(url).pathname) &&
+        !url.includes("/search/") &&
