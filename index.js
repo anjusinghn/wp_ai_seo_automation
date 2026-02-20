@@ -69,3 +69,8 @@ function normalizeDomainArticleUrl(rawUrl, { domain, requireHtmlExtension = fals
   if (requireHtmlExtension) {
     const lower = working.toLowerCase();
     const htmlIndex = lower.indexOf(".html");
+    if (htmlIndex === -1) return null;
+    working = working.slice(0, htmlIndex + 5);
+  }
+
+  try {
