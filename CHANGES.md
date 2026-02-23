@@ -88,3 +88,8 @@ curl -X POST http://localhost:8787/post-from-queue \
 
 Response:
 ```json
+{
+  "ok": true,
+  "success": true,
+  "sourceUrl": "https://www.securityweek.com/...",
+  "sourceTitle": "Article Title",
