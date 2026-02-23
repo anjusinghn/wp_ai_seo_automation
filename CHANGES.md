@@ -83,3 +83,8 @@ curl -X POST http://localhost:8787/post-from-queue \
 # Draft
 curl -X POST http://localhost:8787/post-from-queue \
   -H "Content-Type: application/json" \
+  -d '{"publish": false}'
+```
+
+Response:
+```json
