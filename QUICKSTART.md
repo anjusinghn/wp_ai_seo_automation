@@ -82,3 +82,8 @@ Your system is now running and will:
 - ✅ Automatically post 1 article per day at the configured hour
 - ✅ Pull from the queue in FIFO order
 - ✅ Auto-refetch URLs when queue is empty
+
+## Next Steps
+
+### View Logs
+
