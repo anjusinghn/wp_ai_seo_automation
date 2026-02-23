@@ -81,3 +81,7 @@ async function main() {
     console.log(`found ${articlesOnly.length} article-style URLs in data after cleanup`);
     console.log("sample article URLs:", articlesOnly.slice(0, 10));
     if (typeof json.data.markdown === "string") {
+      console.log("markdown snippet:", json.data.markdown.slice(0, 800));
+    }
+  }
+  if (json.documents && Array.isArray(json.documents) && json.documents.length > 0) {

@@ -84,3 +84,8 @@ function normalizeDomainArticleUrl(rawUrl, { domain, requireHtmlExtension = fals
 
 function expandLinkCandidates(items) {
   if (!items) return [];
+  const results = [];
+  const visited = new Set();
+
+  const visit = (value) => {
+    if (!value) return;
