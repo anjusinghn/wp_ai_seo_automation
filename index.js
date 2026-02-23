@@ -79,3 +79,8 @@ function normalizeDomainArticleUrl(rawUrl, { domain, requireHtmlExtension = fals
     return absolute;
   } catch (_) {
     return null;
+  }
+}
+
+function expandLinkCandidates(items) {
+  if (!items) return [];
