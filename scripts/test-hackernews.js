@@ -85,3 +85,8 @@ async function main() {
     }
   }
   if (json.documents && Array.isArray(json.documents) && json.documents.length > 0) {
+    console.log("documents[0] keys:", Object.keys(json.documents[0]));
+  }
+  const preview = links.slice(0, 10).map((link, idx) => ({
+    idx: idx + 1,
+    title: link.title || link.text || "",
