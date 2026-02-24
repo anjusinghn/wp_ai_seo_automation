@@ -92,3 +92,8 @@ Keep an eye on the server console to see what's happening:
 ```bash
 # The server logs everything it does
 ```
+
+### Use the Test Script
+
+We've included a handy test script:
+
