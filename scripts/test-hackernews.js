@@ -90,3 +90,8 @@ async function main() {
   const preview = links.slice(0, 10).map((link, idx) => ({
     idx: idx + 1,
     title: link.title || link.text || "",
+    url: link.url || link.href || link.link,
+  }));
+  console.log("preview:", preview);
+}
+
