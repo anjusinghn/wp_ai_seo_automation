@@ -87,3 +87,8 @@ Your system is now running and will:
 
 ### View Logs
 
+Keep an eye on the server console to see what's happening:
+
+```bash
+# The server logs everything it does
+```
