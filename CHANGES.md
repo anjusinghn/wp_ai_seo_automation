@@ -93,3 +93,8 @@ Response:
   "success": true,
   "sourceUrl": "https://www.securityweek.com/...",
   "sourceTitle": "Article Title",
+  "postId": 123,
+  "postLink": "https://yoursite.com/blog/...",
+  "queueRemaining": 8
+}
+```
