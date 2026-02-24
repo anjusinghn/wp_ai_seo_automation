@@ -94,3 +94,8 @@ function expandLinkCandidates(items) {
       return;
     }
     if (Array.isArray(value)) {
+      for (const item of value) visit(item);
+      return;
+    }
+    if (typeof value !== "object") return;
+    if (visited.has(value)) return;
