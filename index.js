@@ -89,3 +89,8 @@ function expandLinkCandidates(items) {
 
   const visit = (value) => {
     if (!value) return;
+    if (typeof value === "string") {
+      results.push({ url: value });
+      return;
+    }
+    if (Array.isArray(value)) {
