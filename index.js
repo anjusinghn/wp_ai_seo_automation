@@ -104,3 +104,8 @@ function expandLinkCandidates(items) {
     const url = pickFirstNonEmpty(
       value.url,
       value.href,
+      value.link,
+      value.permalink,
+      value.sourceURL,
+    );
+    const title = pickFirstNonEmpty(
