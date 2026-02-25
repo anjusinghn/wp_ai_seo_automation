@@ -103,3 +103,8 @@ Response:
 The system now logs:
 - URL selection (positions 5-13)
 - Queue operations (add, pop, status)
+- Daily post triggers
+- Complete workflow for each post
+
+Example log:
+```

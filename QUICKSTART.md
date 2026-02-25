@@ -97,3 +97,8 @@ Keep an eye on the server console to see what's happening:
 
 We've included a handy test script:
 
+```bash
+./test-queue.sh
+```
+
+This interactive script will guide you through:
