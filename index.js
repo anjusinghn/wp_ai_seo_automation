@@ -99,3 +99,8 @@ function expandLinkCandidates(items) {
     }
     if (typeof value !== "object") return;
     if (visited.has(value)) return;
+    visited.add(value);
+
+    const url = pickFirstNonEmpty(
+      value.url,
+      value.href,
