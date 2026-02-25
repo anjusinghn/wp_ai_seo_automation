@@ -109,3 +109,8 @@ function expandLinkCandidates(items) {
       value.sourceURL,
     );
     const title = pickFirstNonEmpty(
+      value.title,
+      value.text,
+      value.name,
+      value.heading,
+      value.label,

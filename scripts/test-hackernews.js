@@ -105,3 +105,8 @@ function normalizeArticleUrl(rawUrl) {
   if (working === "") return null;
   const match = working.match(/https?:\/\/(?:www\.)?thehackernews\.com\/[^\s"'()]+?\.html/i);
   if (!match) return null;
+  working = match[0];
+  try {
+    const absolute = new URL(working, "https://thehackernews.com/").toString();
+    if (!absolute.toLowerCase().endsWith(".html")) return null;
+    return absolute;
