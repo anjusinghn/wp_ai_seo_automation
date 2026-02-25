@@ -102,3 +102,8 @@ We've included a handy test script:
 ```
 
 This interactive script will guide you through:
+- Checking server health
+- Viewing queue status
+- Fetching URLs
+- Posting articles
+
