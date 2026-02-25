@@ -100,3 +100,8 @@ main().catch((err) => {
   process.exitCode = 1;
 });
 function normalizeArticleUrl(rawUrl) {
+  if (!rawUrl || typeof rawUrl !== "string") return null;
+  let working = rawUrl.trim();
+  if (working === "") return null;
+  const match = working.match(/https?:\/\/(?:www\.)?thehackernews\.com\/[^\s"'()]+?\.html/i);
+  if (!match) return null;
