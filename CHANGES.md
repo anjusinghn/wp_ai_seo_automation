@@ -108,3 +108,8 @@ The system now logs:
 
 Example log:
 ```
+Found 50 total links
+Selected URLs 5-13 (9 URLs):
+  5. https://www.securityweek.com/article-1/
+  6. https://www.securityweek.com/article-2/
+  ...
