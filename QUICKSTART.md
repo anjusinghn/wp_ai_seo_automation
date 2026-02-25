@@ -107,3 +107,8 @@ This interactive script will guide you through:
 - Fetching URLs
 - Posting articles
 
+### Change Daily Post Time
+
+Edit your `.env` file:
+
+```env
