@@ -98,3 +98,8 @@ Response:
   "queueRemaining": 8
 }
 ```
+
+### 5. Enhanced Logging
+The system now logs:
+- URL selection (positions 5-13)
+- Queue operations (add, pop, status)

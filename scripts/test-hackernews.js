@@ -95,3 +95,8 @@ async function main() {
   console.log("preview:", preview);
 }
 
+main().catch((err) => {
+  console.error(err);
+  process.exitCode = 1;
+});
+function normalizeArticleUrl(rawUrl) {
