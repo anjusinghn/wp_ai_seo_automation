@@ -110,3 +110,7 @@ function normalizeArticleUrl(rawUrl) {
     const absolute = new URL(working, "https://thehackernews.com/").toString();
     if (!absolute.toLowerCase().endsWith(".html")) return null;
     return absolute;
+  } catch (_) {
+    return null;
+  }
+}
