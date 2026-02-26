@@ -124,3 +124,8 @@ function expandLinkCandidates(items) {
 
   visit(items);
   return results;
+}
+
+function deriveTitleFromUrl(urlString, fallback = "Article") {
+  try {
+    const { pathname } = new URL(urlString);
