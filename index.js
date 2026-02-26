@@ -119,3 +119,8 @@ function expandLinkCandidates(items) {
 
     if (url || title) results.push({ url, title });
 
+    for (const child of Object.values(value)) visit(child);
+  };
+
+  visit(items);
+  return results;
