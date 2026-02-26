@@ -114,3 +114,8 @@ function expandLinkCandidates(items) {
       value.name,
       value.heading,
       value.label,
+      value.description,
+    );
+
+    if (url || title) results.push({ url, title });
+
