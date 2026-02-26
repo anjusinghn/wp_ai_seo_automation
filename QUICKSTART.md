@@ -117,3 +117,8 @@ DAILY_POST_HOUR=14  # Posts at 2 PM instead of 10 AM
 
 Then restart the server.
 
+### Deploy for Production
+
+For production, use a process manager:
+
+#### Option 1: PM2 (Recommended)
