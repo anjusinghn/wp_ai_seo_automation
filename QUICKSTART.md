@@ -112,3 +112,8 @@ This interactive script will guide you through:
 Edit your `.env` file:
 
 ```env
+DAILY_POST_HOUR=14  # Posts at 2 PM instead of 10 AM
+```
+
+Then restart the server.
+
