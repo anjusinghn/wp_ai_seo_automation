@@ -122,3 +122,7 @@ Then restart the server.
 For production, use a process manager:
 
 #### Option 1: PM2 (Recommended)
+
+```bash
+npm install -g pm2
+pm2 start index.js --name ai-seo-blog
