@@ -129,3 +129,8 @@ function expandLinkCandidates(items) {
 function deriveTitleFromUrl(urlString, fallback = "Article") {
   try {
     const { pathname } = new URL(urlString);
+    const segments = pathname.split("/").filter(Boolean);
+    const lastSegment = segments.pop();
+    if (!lastSegment) return fallback;
+    const cleaned = lastSegment.replace(/\.[a-z]+$/i, "");
+    const words = cleaned.replace(/[-_]+/g, " ").trim();
