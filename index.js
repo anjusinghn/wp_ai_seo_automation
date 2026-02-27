@@ -134,3 +134,8 @@ function deriveTitleFromUrl(urlString, fallback = "Article") {
     if (!lastSegment) return fallback;
     const cleaned = lastSegment.replace(/\.[a-z]+$/i, "");
     const words = cleaned.replace(/[-_]+/g, " ").trim();
+    if (!words) return fallback;
+    return words.replace(/\b\w/g, (char) => char.toUpperCase());
+  } catch (_) {
+    return fallback;
+  }
