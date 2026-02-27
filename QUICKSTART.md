@@ -136,3 +136,8 @@ See the full README for systemd configuration.
 
 ## Common Commands
 
+```bash
+# Check if server is running
+curl http://localhost:8787/healthz
+
+# View queue
