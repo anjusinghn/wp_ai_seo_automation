@@ -139,3 +139,8 @@ function deriveTitleFromUrl(urlString, fallback = "Article") {
   } catch (_) {
     return fallback;
   }
+}
+
+function normalizeHackerNewsLinks(items) {
+  const candidates = Array.isArray(items) ? items : expandLinkCandidates(items);
+  const list = [];
