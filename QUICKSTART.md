@@ -126,3 +126,8 @@ For production, use a process manager:
 ```bash
 npm install -g pm2
 pm2 start index.js --name ai-seo-blog
+pm2 save
+pm2 startup  # Follow the instructions
+```
+
+#### Option 2: systemd
