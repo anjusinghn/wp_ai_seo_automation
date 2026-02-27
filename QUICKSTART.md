@@ -131,3 +131,8 @@ pm2 startup  # Follow the instructions
 ```
 
 #### Option 2: systemd
+
+See the full README for systemd configuration.
+
+## Common Commands
+
