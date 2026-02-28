@@ -154,3 +154,8 @@ function normalizeHackerNewsLinks(items) {
     if (!absolute) return;
     if (!absolute.includes("thehackernews.com")) return;
     const path = new URL(absolute).pathname.toLowerCase();
+    if (!/\d{4}\/\d{2}\//.test(path)) return;
+    if (seen.has(absolute)) return;
+    seen.add(absolute);
+    const finalTitle =
+      (title && title.trim()) || deriveTitleFromUrl(absolute, "The Hacker News Article");
