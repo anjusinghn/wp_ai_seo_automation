@@ -144,3 +144,8 @@ function deriveTitleFromUrl(urlString, fallback = "Article") {
 function normalizeHackerNewsLinks(items) {
   const candidates = Array.isArray(items) ? items : expandLinkCandidates(items);
   const list = [];
+  const seen = new Set();
+
+  const push = (title, url) => {
+    const absolute = normalizeDomainArticleUrl(url, {
+      domain: "https://thehackernews.com/",
