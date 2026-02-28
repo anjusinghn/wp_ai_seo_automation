@@ -148,3 +148,8 @@ URLs remaining in queue: 8
                   │ (Daily at configured hour OR on-demand)
                   │
                   ▼
+┌─────────────────────────────────────────────────────────────┐
+│              Scrape Article Content                         │
+│              (Firecrawl Crawl API)                          │
+└─────────────────┬───────────────────────────────────────────┘
+                  │
