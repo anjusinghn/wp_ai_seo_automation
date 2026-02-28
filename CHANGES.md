@@ -143,3 +143,8 @@ URLs remaining in queue: 8
 │  [URL 1] → [URL 2] → [URL 3] → ... → [URL 9]               │
 │   FIFO (First In, First Out)                                │
 └─────────────────┬───────────────────────────────────────────┘
+                  │
+                  │ Pop first URL
+                  │ (Daily at configured hour OR on-demand)
+                  │
+                  ▼
