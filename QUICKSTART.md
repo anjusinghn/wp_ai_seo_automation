@@ -141,3 +141,8 @@ See the full README for systemd configuration.
 curl http://localhost:8787/healthz
 
 # View queue
+curl http://localhost:8787/queue-status
+
+# Fetch new URLs
+curl -X POST http://localhost:8787/fetch-urls
+
