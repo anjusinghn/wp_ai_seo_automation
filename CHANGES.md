@@ -153,3 +153,8 @@ URLs remaining in queue: 8
 │              (Firecrawl Crawl API)                          │
 └─────────────────┬───────────────────────────────────────────┘
                   │
+                  │ Summary text
+                  │
+                  ▼
+┌─────────────────────────────────────────────────────────────┐
+│           Generate Blog Post (Groq AI)                      │

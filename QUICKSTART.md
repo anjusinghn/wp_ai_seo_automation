@@ -146,3 +146,8 @@ curl http://localhost:8787/queue-status
 # Fetch new URLs
 curl -X POST http://localhost:8787/fetch-urls
 
+# Post on demand (draft)
+curl -X POST http://localhost:8787/post-from-queue \
+  -H "Content-Type: application/json" \
+  -d '{"publish": false}'
+
