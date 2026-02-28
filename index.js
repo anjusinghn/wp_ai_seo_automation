@@ -149,3 +149,8 @@ function normalizeHackerNewsLinks(items) {
   const push = (title, url) => {
     const absolute = normalizeDomainArticleUrl(url, {
       domain: "https://thehackernews.com/",
+      requireHtmlExtension: true,
+    });
+    if (!absolute) return;
+    if (!absolute.includes("thehackernews.com")) return;
+    const path = new URL(absolute).pathname.toLowerCase();
