@@ -156,3 +156,8 @@ curl -X POST http://localhost:8787/post-from-queue \
   -H "Content-Type: application/json" \
   -d '{"publish": true}'
 ```
+
+## Troubleshooting
+
+### "Failed to get URL from queue"
+
