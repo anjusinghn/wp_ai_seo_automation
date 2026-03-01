@@ -166,3 +166,8 @@ Your queue is empty. Fetch URLs first:
 ```bash
 curl -X POST http://localhost:8787/fetch-urls
 ```
+
+### "Firecrawl account is not permitted"
+
+Contact Firecrawl support to enable the domain you're trying to scrape.
+
