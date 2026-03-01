@@ -161,3 +161,8 @@ curl -X POST http://localhost:8787/post-from-queue \
 
 ### "Failed to get URL from queue"
 
+Your queue is empty. Fetch URLs first:
+
+```bash
+curl -X POST http://localhost:8787/fetch-urls
+```
