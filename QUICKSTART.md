@@ -151,3 +151,8 @@ curl -X POST http://localhost:8787/post-from-queue \
   -H "Content-Type: application/json" \
   -d '{"publish": false}'
 
+# Post on demand (publish)
+curl -X POST http://localhost:8787/post-from-queue \
+  -H "Content-Type: application/json" \
+  -d '{"publish": true}'
+```
