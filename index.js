@@ -169,3 +169,8 @@ function normalizeHackerNewsLinks(items) {
       continue;
     }
     const candidateUrl = pickFirstNonEmpty(
+      item.url,
+      item.href,
+      item.link,
+      item.permalink,
+      item.sourceURL,
