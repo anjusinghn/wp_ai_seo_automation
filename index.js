@@ -159,3 +159,8 @@ function normalizeHackerNewsLinks(items) {
     seen.add(absolute);
     const finalTitle =
       (title && title.trim()) || deriveTitleFromUrl(absolute, "The Hacker News Article");
+    list.push({ title: finalTitle, url: absolute });
+  };
+
+  for (const item of candidates) {
+    if (!item) continue;
