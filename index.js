@@ -164,3 +164,8 @@ function normalizeHackerNewsLinks(items) {
 
   for (const item of candidates) {
     if (!item) continue;
+    if (typeof item === "string") {
+      push("", item);
+      continue;
+    }
+    const candidateUrl = pickFirstNonEmpty(

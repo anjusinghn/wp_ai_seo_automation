@@ -163,3 +163,8 @@ URLs remaining in queue: 8
 │  Output: Title + Hook + HTML Content                        │
 └─────────────────┬───────────────────────────────────────────┘
                   │
+                  │ Title + Hook + HTML
+                  │
+                  ▼
+┌─────────────────────────────────────────────────────────────┐
+│              Post to WordPress                              │
