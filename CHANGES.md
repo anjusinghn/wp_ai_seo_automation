@@ -158,3 +158,8 @@ URLs remaining in queue: 8
                   ▼
 ┌─────────────────────────────────────────────────────────────┐
 │           Generate Blog Post (Groq AI)                      │
+│                                                              │
+│  Input:  Summary + URL + Title                              │
+│  Output: Title + Hook + HTML Content                        │
+└─────────────────┬───────────────────────────────────────────┘
+                  │
