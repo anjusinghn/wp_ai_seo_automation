@@ -171,3 +171,8 @@ curl -X POST http://localhost:8787/fetch-urls
 
 Contact Firecrawl support to enable the domain you're trying to scrape.
 
+### WordPress authentication failed
+
+1. Verify your `WP_SITE_URL` is correct (with /blog if needed)
+2. Check your `WP_USER` is correct
+3. Make sure you're using an Application Password, not your regular password
