@@ -178,3 +178,8 @@ URLs remaining in queue: 8
 │         Published Blog Post                                 │
 │         Queue count decrements                              │
 └─────────────────────────────────────────────────────────────┘
+```
+
+## Workflow
+
+### Daily Automated Flow
