@@ -176,3 +176,8 @@ Contact Firecrawl support to enable the domain you're trying to scrape.
 1. Verify your `WP_SITE_URL` is correct (with /blog if needed)
 2. Check your `WP_USER` is correct
 3. Make sure you're using an Application Password, not your regular password
+4. Test WordPress REST API: `curl https://yoursite.com/blog/wp-json/wp/v2/posts`
+
+### Daily post not triggering
+
+1. Check the server is still running
