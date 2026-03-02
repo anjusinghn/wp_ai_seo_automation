@@ -174,3 +174,8 @@ function normalizeHackerNewsLinks(items) {
       item.link,
       item.permalink,
       item.sourceURL,
+    );
+    const candidateTitle = pickFirstNonEmpty(
+      item.title,
+      item.text,
+      item.name,
