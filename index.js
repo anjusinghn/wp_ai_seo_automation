@@ -179,3 +179,8 @@ function normalizeHackerNewsLinks(items) {
       item.title,
       item.text,
       item.name,
+      item.heading,
+      item.label,
+      item.description,
+    );
+    push(candidateTitle, candidateUrl);
