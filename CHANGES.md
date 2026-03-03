@@ -198,3 +198,8 @@ URLs remaining in queue: 8
 4. **Scrape** - Get article content
 5. **Generate** - Create blog post with AI
 6. **Post** - Publish or save as draft (based on request)
+7. **Response** - Return post details and queue status
+
+### Queue Refill Flow
+1. **Trigger** - Queue becomes empty OR manual `POST /fetch-urls`
+2. **Scrape** - Fetch SecurityWeek homepage
