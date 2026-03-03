@@ -193,3 +193,8 @@ URLs remaining in queue: 8
 
 ### Manual Flow (On-Demand)
 1. **Endpoint Hit** - User calls `POST /post-from-queue`
+2. **Queue Check** - If queue is empty, fetch new URLs
+3. **Pop URL** - Remove first URL from queue
+4. **Scrape** - Get article content
+5. **Generate** - Create blog post with AI
+6. **Post** - Publish or save as draft (based on request)
