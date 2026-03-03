@@ -184,3 +184,8 @@ function normalizeHackerNewsLinks(items) {
       item.description,
     );
     push(candidateTitle, candidateUrl);
+  }
+
+  return list;
+}
+
