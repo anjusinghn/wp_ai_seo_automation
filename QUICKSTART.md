@@ -181,3 +181,8 @@ Contact Firecrawl support to enable the domain you're trying to scrape.
 ### Daily post not triggering
 
 1. Check the server is still running
+2. Verify `DAILY_POST_HOUR` is set correctly
+3. Check queue has URLs: `curl http://localhost:8787/queue-status`
+4. Look at server logs for any errors
+
+## Need Help?

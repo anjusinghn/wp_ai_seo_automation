@@ -188,3 +188,8 @@ URLs remaining in queue: 8
 3. **Pop URL** - Remove first URL from queue (FIFO)
 4. **Scrape** - Get article content using Firecrawl
 5. **Generate** - Create blog post using Groq AI
+6. **Post** - Publish to WordPress
+7. **Log** - Record success and remaining queue count
+
+### Manual Flow (On-Demand)
+1. **Endpoint Hit** - User calls `POST /post-from-queue`
