@@ -186,3 +186,7 @@ Contact Firecrawl support to enable the domain you're trying to scrape.
 4. Look at server logs for any errors
 
 ## Need Help?
+
+Check the full [README.md](README.md) for detailed documentation.
+
+
