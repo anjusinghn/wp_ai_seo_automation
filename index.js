@@ -194,3 +194,8 @@ function extractMarkdownLinks(markdown, { baseUrl } = {}) {
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const links = [];
   let match;
+  while ((match = regex.exec(markdown))) {
+    const text = match[1]?.trim();
+    const href = match[2]?.trim();
+    if (!text || !href) continue;
+    let absolute = href;
