@@ -189,3 +189,8 @@ function normalizeHackerNewsLinks(items) {
   return list;
 }
 
+function extractMarkdownLinks(markdown, { baseUrl } = {}) {
+  if (typeof markdown !== "string" || markdown.trim() === "") return [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const links = [];
+  let match;
