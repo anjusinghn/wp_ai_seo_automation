@@ -183,3 +183,8 @@ URLs remaining in queue: 8
 ## Workflow
 
 ### Daily Automated Flow
+1. **Hour Check** - Every hour, system checks if it's time to post
+2. **Queue Check** - If queue is empty, fetch new URLs from SecurityWeek
+3. **Pop URL** - Remove first URL from queue (FIFO)
+4. **Scrape** - Get article content using Firecrawl
+5. **Generate** - Create blog post using Groq AI
