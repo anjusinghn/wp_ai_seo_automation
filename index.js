@@ -199,3 +199,8 @@ function extractMarkdownLinks(markdown, { baseUrl } = {}) {
     const href = match[2]?.trim();
     if (!text || !href) continue;
     let absolute = href;
+    if (baseUrl) {
+      try {
+        absolute = new URL(href, baseUrl).toString();
+      } catch (_) {
+        continue;
