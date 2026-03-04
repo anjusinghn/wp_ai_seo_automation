@@ -218,3 +218,8 @@ URLs remaining in queue: 8
 - `url_queue.example.json` - Example queue structure
 
 ### Modified Files
+
+#### `index.js`
+1. **Removed** `firecrawlExtract()` function (lines ~371-410)
+2. **Added** Queue management functions:
+   - `loadQueue()`

@@ -214,3 +214,9 @@ function extractMarkdownLinks(markdown, { baseUrl } = {}) {
 function collectHackerNewsLinksFromMetadata(metadata) {
   return normalizeHackerNewsLinks(metadata);
 }
+
+function collectHackerNewsLinksFromHtml(html) {
+  if (typeof html !== "string" || html.trim() === "") return [];
+  const linkRegex = /<a[^>]+href="([^"]+)"[^>]*>(.*?)<\/a>/gi;
+  const tagsRegex = /<[^>]+>/g;
+  const links = [];
