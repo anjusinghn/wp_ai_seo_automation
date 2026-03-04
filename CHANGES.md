@@ -208,3 +208,8 @@ URLs remaining in queue: 8
 5. **Add** - Append to queue (avoiding duplicates)
 6. **Log** - Show all selected URLs with positions
 
+## Code Changes
+
+### Added Files
+- `README.md` - Comprehensive documentation
+- `QUICKSTART.md` - Quick start guide
