@@ -204,3 +204,8 @@ function extractMarkdownLinks(markdown, { baseUrl } = {}) {
         absolute = new URL(href, baseUrl).toString();
       } catch (_) {
         continue;
+      }
+    }
+    links.push({ text, url: absolute });
+  }
+  return links;

@@ -203,3 +203,8 @@ URLs remaining in queue: 8
 ### Queue Refill Flow
 1. **Trigger** - Queue becomes empty OR manual `POST /fetch-urls`
 2. **Scrape** - Fetch SecurityWeek homepage
+3. **Parse** - Extract all article URLs
+4. **Select** - Take URLs at positions 5-13 (9 URLs)
+5. **Add** - Append to queue (avoiding duplicates)
+6. **Log** - Show all selected URLs with positions
+
