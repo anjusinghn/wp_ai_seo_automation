@@ -209,3 +209,8 @@ function extractMarkdownLinks(markdown, { baseUrl } = {}) {
     links.push({ text, url: absolute });
   }
   return links;
+}
+
+function collectHackerNewsLinksFromMetadata(metadata) {
+  return normalizeHackerNewsLinks(metadata);
+}
