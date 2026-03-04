@@ -213,3 +213,8 @@ URLs remaining in queue: 8
 ### Added Files
 - `README.md` - Comprehensive documentation
 - `QUICKSTART.md` - Quick start guide
+- `CHANGES.md` - This file
+- `test-queue.sh` - Interactive test script
+- `url_queue.example.json` - Example queue structure
+
+### Modified Files
