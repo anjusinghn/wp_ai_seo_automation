@@ -220,3 +220,8 @@ function collectHackerNewsLinksFromHtml(html) {
   const linkRegex = /<a[^>]+href="([^"]+)"[^>]*>(.*?)<\/a>/gi;
   const tagsRegex = /<[^>]+>/g;
   const links = [];
+  let match;
+  while ((match = linkRegex.exec(html))) {
+    const href = match[1];
+    const text = match[2].replace(tagsRegex, "").trim();
+    links.push({ url: href, title: text });
