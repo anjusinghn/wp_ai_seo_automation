@@ -223,3 +223,8 @@ URLs remaining in queue: 8
 1. **Removed** `firecrawlExtract()` function (lines ~371-410)
 2. **Added** Queue management functions:
    - `loadQueue()`
+   - `saveQueue()`
+   - `addUrlsToQueue()`
+   - `popUrlFromQueue()`
+   - `getQueueStatus()`
+3. **Simplified** `fetchSecurityWeekTrendingCandidates()`:
