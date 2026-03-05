@@ -225,3 +225,8 @@ function collectHackerNewsLinksFromHtml(html) {
     const href = match[1];
     const text = match[2].replace(tagsRegex, "").trim();
     links.push({ url: href, title: text });
+  }
+  return normalizeHackerNewsLinks(links);
+}
+
+function collectHackerNewsLinksFromText(text) {
