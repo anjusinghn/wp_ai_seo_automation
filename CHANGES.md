@@ -228,3 +228,8 @@ URLs remaining in queue: 8
    - `popUrlFromQueue()`
    - `getQueueStatus()`
 3. **Simplified** `fetchSecurityWeekTrendingCandidates()`:
+   - Removed extract API calls
+   - Added URL selection logic (5-13)
+   - Added detailed logging
+4. **Added** `postFromQueue()` function:
+   - Complete workflow for posting from queue
