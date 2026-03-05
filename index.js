@@ -235,3 +235,8 @@ function collectHackerNewsLinksFromText(text) {
   const matches = [];
   let match;
   while ((match = regex.exec(text))) {
+    matches.push({ url: match[0] });
+  }
+  return normalizeHackerNewsLinks(matches);
+}
+
