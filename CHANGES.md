@@ -233,3 +233,8 @@ URLs remaining in queue: 8
    - Added detailed logging
 4. **Added** `postFromQueue()` function:
    - Complete workflow for posting from queue
+   - Auto-refetch when empty
+   - Detailed logging
+5. **Added** Daily scheduler:
+   - `checkAndPostDaily()`
+   - Hourly interval check
