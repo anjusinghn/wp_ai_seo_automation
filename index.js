@@ -230,3 +230,8 @@ function collectHackerNewsLinksFromHtml(html) {
 }
 
 function collectHackerNewsLinksFromText(text) {
+  if (typeof text !== "string" || text.trim() === "") return [];
+  const regex = /https?:\/\/(?:www\.)?thehackernews\.com\/[^\s"'()]+/gi;
+  const matches = [];
+  let match;
+  while ((match = regex.exec(text))) {
