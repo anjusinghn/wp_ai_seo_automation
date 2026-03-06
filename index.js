@@ -245,3 +245,8 @@ function createLinkAggregator(normalizeFn) {
   const list = [];
   return {
     add(items) {
+      const normalized = normalizeFn(items);
+      for (const link of normalized) {
+        if (seen.has(link.url)) continue;
+        seen.add(link.url);
+        list.push(link);
