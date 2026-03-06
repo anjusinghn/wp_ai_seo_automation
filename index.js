@@ -240,3 +240,8 @@ function collectHackerNewsLinksFromText(text) {
   return normalizeHackerNewsLinks(matches);
 }
 
+function createLinkAggregator(normalizeFn) {
+  const seen = new Set();
+  const list = [];
+  return {
+    add(items) {

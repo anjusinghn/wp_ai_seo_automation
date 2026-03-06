@@ -243,3 +243,8 @@ URLs remaining in queue: 8
    - `GET /queue-status`
    - `POST /fetch-urls`
    - `POST /post-from-queue`
+7. **Enhanced** server startup message with ASCII art
+
+#### `package.json`
+1. **Added** npm scripts:
+   - `start` - Start the server
