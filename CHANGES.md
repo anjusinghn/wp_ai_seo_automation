@@ -258,3 +258,8 @@ URLs remaining in queue: 8
    - Description
    - Keywords
    - Author
+
+## Environment Variables
+
+### New Variables
+- `DAILY_POST_HOUR` - Hour of day to post (0-23, default: 10)
