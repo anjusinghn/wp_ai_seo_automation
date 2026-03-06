@@ -248,3 +248,8 @@ URLs remaining in queue: 8
 #### `package.json`
 1. **Added** npm scripts:
    - `start` - Start the server
+   - `fetch-urls` - Fetch URLs via curl
+   - `queue-status` - Check queue via curl
+   - `post-now` - Post and publish via curl
+   - `post-draft` - Post as draft via curl
+   - `test-queue` - Run test script
