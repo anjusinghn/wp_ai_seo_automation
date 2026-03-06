@@ -250,3 +250,8 @@ function createLinkAggregator(normalizeFn) {
         if (seen.has(link.url)) continue;
         seen.add(link.url);
         list.push(link);
+      }
+    },
+    all() {
+      return list.slice();
+    },
