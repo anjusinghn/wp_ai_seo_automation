@@ -255,3 +255,8 @@ function createLinkAggregator(normalizeFn) {
     all() {
       return list.slice();
     },
+  };
+}
+
+function harvestHackerNewsScrape(scrape, aggregator) {
+  if (!scrape || !aggregator) return;
