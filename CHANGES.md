@@ -238,3 +238,8 @@ URLs remaining in queue: 8
 5. **Added** Daily scheduler:
    - `checkAndPostDaily()`
    - Hourly interval check
+   - Startup check with 5s delay
+6. **Added** New endpoints:
+   - `GET /queue-status`
+   - `POST /fetch-urls`
+   - `POST /post-from-queue`
