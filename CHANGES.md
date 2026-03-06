@@ -253,3 +253,8 @@ URLs remaining in queue: 8
    - `post-now` - Post and publish via curl
    - `post-draft` - Post as draft via curl
    - `test-queue` - Run test script
+2. **Updated** metadata:
+   - Version: 2.0.0
+   - Description
+   - Keywords
+   - Author
