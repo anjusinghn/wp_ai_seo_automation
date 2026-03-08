@@ -260,3 +260,8 @@ function createLinkAggregator(normalizeFn) {
 
 function harvestHackerNewsScrape(scrape, aggregator) {
   if (!scrape || !aggregator) return;
+  const markdown = pickFirstNonEmpty(scrape.summary, scrape.markdown, scrape.rawText);
+  const html = scrape.html || "";
+  const rawText = pickFirstNonEmpty(scrape.rawText, scrape.summary, "");
+
+  aggregator.add(scrape.links);
