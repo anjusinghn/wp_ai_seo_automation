@@ -278,3 +278,8 @@ URLs remaining in queue: 8
 The queue is stored in `url_queue.json`:
 
 ```json
+{
+  "urls": [
+    {
+      "url": "https://www.securityweek.com/...",
+      "title": "Article Title",
