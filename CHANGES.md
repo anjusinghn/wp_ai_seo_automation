@@ -263,3 +263,8 @@ URLs remaining in queue: 8
 
 ### New Variables
 - `DAILY_POST_HOUR` - Hour of day to post (0-23, default: 10)
+
+### Existing Variables (unchanged)
+- `FIRECRAWL_API_KEY`
+- `GROQ_API_KEY`
+- `WP_SITE_URL`

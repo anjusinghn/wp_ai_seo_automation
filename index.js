@@ -265,3 +265,8 @@ function harvestHackerNewsScrape(scrape, aggregator) {
   const rawText = pickFirstNonEmpty(scrape.rawText, scrape.summary, "");
 
   aggregator.add(scrape.links);
+  aggregator.add(collectHackerNewsLinksFromMetadata(scrape.metadata));
+  aggregator.add(collectHackerNewsLinksFromHtml(html));
+  aggregator.add(
+    extractMarkdownLinks(markdown, { baseUrl: "https://thehackernews.com/" }).map(
+      ({ text, url }) => ({ title: text, url }),
