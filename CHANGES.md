@@ -283,3 +283,8 @@ The queue is stored in `url_queue.json`:
     {
       "url": "https://www.securityweek.com/...",
       "title": "Article Title",
+      "description": "",
+      "snippet": ""
+    }
+  ],
+  "lastFetched": "2025-10-08T10:00:00.000Z"
