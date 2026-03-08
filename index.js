@@ -280,3 +280,8 @@ function harvestHackerNewsScrape(scrape, aggregator) {
   for (const doc of documents) {
     if (!doc) continue;
     const docMarkdown = pickFirstNonEmpty(doc.summary, doc.markdown, doc.rawText);
+    const docHtml = doc.html || "";
+    const docRaw = pickFirstNonEmpty(doc.rawText, doc.summary, doc.markdown, "");
+    aggregator.add(doc.links);
+    aggregator.add(collectHackerNewsLinksFromMetadata(doc.metadata));
+    aggregator.add(collectHackerNewsLinksFromHtml(docHtml));
