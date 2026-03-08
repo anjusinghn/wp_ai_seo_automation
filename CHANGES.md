@@ -273,3 +273,8 @@ URLs remaining in queue: 8
 - `GROQ_MODEL`
 - `PORT`
 
+## Queue File Format
+
+The queue is stored in `url_queue.json`:
+
+```json
