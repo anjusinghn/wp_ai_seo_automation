@@ -268,3 +268,8 @@ URLs remaining in queue: 8
 - `FIRECRAWL_API_KEY`
 - `GROQ_API_KEY`
 - `WP_SITE_URL`
+- `WP_USER`
+- `WP_APP_PASSWORD`
+- `GROQ_MODEL`
+- `PORT`
+
