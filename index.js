@@ -285,3 +285,8 @@ function harvestHackerNewsScrape(scrape, aggregator) {
     aggregator.add(doc.links);
     aggregator.add(collectHackerNewsLinksFromMetadata(doc.metadata));
     aggregator.add(collectHackerNewsLinksFromHtml(docHtml));
+    aggregator.add(collectHackerNewsLinksFromText(docRaw));
+    aggregator.add(
+      extractMarkdownLinks(docMarkdown, { baseUrl: "https://thehackernews.com/" }).map(
+        ({ text, url }) => ({ title: text, url }),
+      ),
