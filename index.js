@@ -275,3 +275,8 @@ function harvestHackerNewsScrape(scrape, aggregator) {
   aggregator.add(collectHackerNewsLinksFromText(html));
   aggregator.add(collectHackerNewsLinksFromText(markdown));
   aggregator.add(collectHackerNewsLinksFromText(rawText));
+
+  const documents = Array.isArray(scrape.documents) ? scrape.documents : [];
+  for (const doc of documents) {
+    if (!doc) continue;
+    const docMarkdown = pickFirstNonEmpty(doc.summary, doc.markdown, doc.rawText);
