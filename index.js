@@ -295,3 +295,8 @@ function harvestHackerNewsScrape(scrape, aggregator) {
 }
 
 // ----- firecrawl ------------------------------------------------------------
+async function firecrawlScrape(env, url, { formats = ["summary", "html", "links"] } = {}) {
+  const { firecrawlApiKey } = getConfig(env);
+  const res = await fetch(`${FIRECRAWL_BASE}/scrape`, {
+    method: "POST",
+    headers: {
