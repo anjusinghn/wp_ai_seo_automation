@@ -288,3 +288,8 @@ The queue is stored in `url_queue.json`:
     }
   ],
   "lastFetched": "2025-10-08T10:00:00.000Z"
+}
+```
+
+## Benefits
+
