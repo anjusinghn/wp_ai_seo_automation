@@ -290,3 +290,8 @@ function harvestHackerNewsScrape(scrape, aggregator) {
       extractMarkdownLinks(docMarkdown, { baseUrl: "https://thehackernews.com/" }).map(
         ({ text, url }) => ({ title: text, url }),
       ),
+    );
+  }
+}
+
+// ----- firecrawl ------------------------------------------------------------
