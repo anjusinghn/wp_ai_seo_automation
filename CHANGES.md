@@ -303,3 +303,8 @@ The queue is stored in `url_queue.json`:
 ### After
 - ✅ Simple, reliable scraping (no extract API)
 - ✅ FIFO queue system with persistence
+- ✅ Automated daily posting
+- ✅ On-demand posting capability
+- ✅ Clear logging of URL selection (5-13)
+- ✅ Auto-refetch when queue is empty
+- ✅ Multiple endpoints for management
