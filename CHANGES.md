@@ -293,3 +293,8 @@ The queue is stored in `url_queue.json`:
 
 ## Benefits
 
+### Before
+- ❌ Extract API failing with errors
+- ❌ No queue system
+- ❌ No automated daily posting
+- ❌ Manual intervention required for each post
