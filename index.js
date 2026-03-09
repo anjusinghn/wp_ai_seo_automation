@@ -300,3 +300,8 @@ async function firecrawlScrape(env, url, { formats = ["summary", "html", "links"
   const res = await fetch(`${FIRECRAWL_BASE}/scrape`, {
     method: "POST",
     headers: {
+      Authorization: `Bearer ${firecrawlApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ url, formats, onlyMainContent: false }),
+  });

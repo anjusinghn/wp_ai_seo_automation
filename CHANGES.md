@@ -298,3 +298,8 @@ The queue is stored in `url_queue.json`:
 - ❌ No queue system
 - ❌ No automated daily posting
 - ❌ Manual intervention required for each post
+- ❌ No visibility into URL selection
+
+### After
+- ✅ Simple, reliable scraping (no extract API)
+- ✅ FIFO queue system with persistence
