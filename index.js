@@ -305,3 +305,8 @@ async function firecrawlScrape(env, url, { formats = ["summary", "html", "links"
     },
     body: JSON.stringify({ url, formats, onlyMainContent: false }),
   });
+  const text = await res.text();
+  if (!res.ok) throw new Error(`Firecrawl scrape ${res.status} ${text}`);
+  const json = JSON.parse(text);
+  if (json.error) throw new Error(String(json.error));
+  const normalized = normalizeFirecrawlPayload(json);
