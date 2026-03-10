@@ -323,3 +323,8 @@ npm start
 
 ### Manual Testing
 ```bash
+# 1. Check health
+curl http://localhost:8787/healthz
+
+# 2. Fetch URLs
+curl -X POST http://localhost:8787/fetch-urls
