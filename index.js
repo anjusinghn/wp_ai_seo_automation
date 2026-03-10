@@ -320,3 +320,8 @@ async function firecrawlStartCrawl(env, url) {
   const { firecrawlApiKey } = getConfig(env);
   const res = await fetch(`${FIRECRAWL_BASE}/crawl`, {
     method: "POST",
+    headers: {
+      Authorization: `Bearer ${firecrawlApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
