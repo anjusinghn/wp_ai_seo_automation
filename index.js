@@ -310,3 +310,8 @@ async function firecrawlScrape(env, url, { formats = ["summary", "html", "links"
   const json = JSON.parse(text);
   if (json.error) throw new Error(String(json.error));
   const normalized = normalizeFirecrawlPayload(json);
+  console.log(
+    `firecrawlScrape: ${url} (docs=${normalized.documents.length}, links=${normalized.links.length})`,
+  );
+  return normalized;
+}
