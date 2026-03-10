@@ -315,3 +315,8 @@ async function firecrawlScrape(env, url, { formats = ["summary", "html", "links"
   );
   return normalized;
 }
+
+async function firecrawlStartCrawl(env, url) {
+  const { firecrawlApiKey } = getConfig(env);
+  const res = await fetch(`${FIRECRAWL_BASE}/crawl`, {
+    method: "POST",

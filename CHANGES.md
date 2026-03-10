@@ -318,3 +318,8 @@ The queue is stored in `url_queue.json`:
 npm start
 
 # Terminal 2: Test the system
+./test-queue.sh
+```
+
+### Manual Testing
+```bash
