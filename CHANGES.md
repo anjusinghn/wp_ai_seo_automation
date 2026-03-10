@@ -308,3 +308,8 @@ The queue is stored in `url_queue.json`:
 - ✅ Clear logging of URL selection (5-13)
 - ✅ Auto-refetch when queue is empty
 - ✅ Multiple endpoints for management
+- ✅ Helper scripts and documentation
+
+## Testing
+
+### Quick Test
