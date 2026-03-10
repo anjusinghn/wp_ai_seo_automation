@@ -313,3 +313,8 @@ The queue is stored in `url_queue.json`:
 ## Testing
 
 ### Quick Test
+```bash
+# Terminal 1: Start server
+npm start
+
+# Terminal 2: Test the system
