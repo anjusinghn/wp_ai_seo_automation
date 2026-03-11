@@ -338,3 +338,8 @@ curl -X POST http://localhost:8787/post-from-queue \
   -d '{"publish": false}'
 
 # 5. Check queue again
+curl http://localhost:8787/queue-status
+```
+
+### NPM Scripts
+```bash

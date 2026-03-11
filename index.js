@@ -335,3 +335,8 @@ async function firecrawlStartCrawl(env, url) {
     }),
   });
   const text = await res.text();
+  if (!res.ok) throw new Error(`Firecrawl crawl start ${res.status} ${text}`);
+  return JSON.parse(text);
+}
+
+async function firecrawlPoll(env, jobId, { timeoutMs = 45000, intervalMs = 1500 } = {}) {
