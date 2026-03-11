@@ -333,3 +333,8 @@ curl -X POST http://localhost:8787/fetch-urls
 curl http://localhost:8787/queue-status
 
 # 4. Post as draft
+curl -X POST http://localhost:8787/post-from-queue \
+  -H "Content-Type: application/json" \
+  -d '{"publish": false}'
+
+# 5. Check queue again
