@@ -343,3 +343,8 @@ curl http://localhost:8787/queue-status
 
 ### NPM Scripts
 ```bash
+npm run fetch-urls    # Fetch URLs
+npm run queue-status  # Check queue
+npm run post-draft    # Post as draft
+npm run post-now      # Post and publish
+```
