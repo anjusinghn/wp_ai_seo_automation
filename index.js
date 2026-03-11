@@ -325,3 +325,8 @@ async function firecrawlStartCrawl(env, url) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+      url,
+      limit: 1,
+      crawlEntireDomain: false,
+      scrapeOptions: {
+        formats: ["summary", "html", "links"],
