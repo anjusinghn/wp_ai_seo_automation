@@ -330,3 +330,8 @@ async function firecrawlStartCrawl(env, url) {
       crawlEntireDomain: false,
       scrapeOptions: {
         formats: ["summary", "html", "links"],
+        onlyMainContent: false,
+      },
+    }),
+  });
+  const text = await res.text();
