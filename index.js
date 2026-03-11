@@ -340,3 +340,8 @@ async function firecrawlStartCrawl(env, url) {
 }
 
 async function firecrawlPoll(env, jobId, { timeoutMs = 45000, intervalMs = 1500 } = {}) {
+  const { firecrawlApiKey } = getConfig(env);
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    const res = await fetch(`${FIRECRAWL_BASE}/crawl/${jobId}`, {
+      headers: { Authorization: `Bearer ${firecrawlApiKey}` },
