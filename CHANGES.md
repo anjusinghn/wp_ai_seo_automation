@@ -328,3 +328,8 @@ curl http://localhost:8787/healthz
 
 # 2. Fetch URLs
 curl -X POST http://localhost:8787/fetch-urls
+
+# 3. Check queue
+curl http://localhost:8787/queue-status
+
+# 4. Post as draft
