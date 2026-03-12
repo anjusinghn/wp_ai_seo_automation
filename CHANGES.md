@@ -353,3 +353,8 @@ npm run post-now      # Post and publish
 
 If you were using the old version:
 
+1. **Backup** your current setup
+2. **Pull** the new code
+3. **No database changes** - queue is file-based
+4. **Start** the server: `npm start`
+5. **Fetch** initial URLs: `npm run fetch-urls`

@@ -350,3 +350,8 @@ async function firecrawlPoll(env, jobId, { timeoutMs = 45000, intervalMs = 1500 
     if (!res.ok) throw new Error(`Firecrawl poll ${res.status} ${text}`);
     const json = JSON.parse(text);
     const done =
+      json.status === "completed" ||
+      json.success === true ||
+      Array.isArray(json.data) ||
+      Array.isArray(json.documents);
+    if (done) return json;
