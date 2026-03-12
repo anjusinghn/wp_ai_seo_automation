@@ -358,3 +358,8 @@ If you were using the old version:
 3. **No database changes** - queue is file-based
 4. **Start** the server: `npm start`
 5. **Fetch** initial URLs: `npm run fetch-urls`
+6. **Test** posting: `npm run post-draft`
+7. **Monitor** the logs for 24 hours to ensure daily posts work
+
+## Performance
+
