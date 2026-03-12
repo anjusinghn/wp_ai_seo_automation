@@ -345,3 +345,8 @@ async function firecrawlPoll(env, jobId, { timeoutMs = 45000, intervalMs = 1500 
   while (Date.now() - start < timeoutMs) {
     const res = await fetch(`${FIRECRAWL_BASE}/crawl/${jobId}`, {
       headers: { Authorization: `Bearer ${firecrawlApiKey}` },
+    });
+    const text = await res.text();
+    if (!res.ok) throw new Error(`Firecrawl poll ${res.status} ${text}`);
+    const json = JSON.parse(text);
+    const done =
