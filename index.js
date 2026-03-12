@@ -360,3 +360,8 @@ async function firecrawlPoll(env, jobId, { timeoutMs = 45000, intervalMs = 1500 
   throw new Error("Firecrawl poll timed out");
 }
 
+function normalizeFirecrawlPayload(payload) {
+  if (!payload || typeof payload !== "object") {
+    return {
+      summary: "",
+      markdown: "",
