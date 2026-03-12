@@ -348,3 +348,8 @@ npm run queue-status  # Check queue
 npm run post-draft    # Post as draft
 npm run post-now      # Post and publish
 ```
+
+## Migration Guide
+
+If you were using the old version:
+
