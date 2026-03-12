@@ -363,3 +363,8 @@ If you were using the old version:
 
 ## Performance
 
+- **Queue Operations**: O(1) - Fast read/write to JSON file
+- **Memory**: Minimal - Queue stored on disk
+- **Network**: Efficient - Only scrapes when needed
+- **Daily Check**: Runs every hour (low overhead)
+
