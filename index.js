@@ -355,3 +355,8 @@ async function firecrawlPoll(env, jobId, { timeoutMs = 45000, intervalMs = 1500 
       Array.isArray(json.data) ||
       Array.isArray(json.documents);
     if (done) return json;
+    await sleep(intervalMs);
+  }
+  throw new Error("Firecrawl poll timed out");
+}
+
