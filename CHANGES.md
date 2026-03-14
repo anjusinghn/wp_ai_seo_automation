@@ -368,3 +368,8 @@ If you were using the old version:
 - **Network**: Efficient - Only scrapes when needed
 - **Daily Check**: Runs every hour (low overhead)
 
+## Future Enhancements (Ideas)
+
+- 📧 Email notifications on successful posts
+- 📊 Analytics dashboard
+- 🔄 Multi-source support (other security news sites)
