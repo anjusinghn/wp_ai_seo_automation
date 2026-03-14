@@ -385,3 +385,13 @@ function normalizeFirecrawlPayload(payload) {
   };
 
   const arrayKeys = ["data", "documents", "results", "items", "records"];
+  for (const key of arrayKeys) {
+    const value = payload[key];
+    if (Array.isArray(value)) {
+      for (const doc of value) addDoc(doc);
+    } else if (value && typeof value === "object") {
+      addDoc(value);
+    }
+  }
+
+  if (payload.document && typeof payload.document === "object") addDoc(payload.document);
