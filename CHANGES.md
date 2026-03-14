@@ -373,3 +373,8 @@ If you were using the old version:
 - 📧 Email notifications on successful posts
 - 📊 Analytics dashboard
 - 🔄 Multi-source support (other security news sites)
+- 🎯 Custom URL selection rules
+- 📅 Multiple posts per day
+- 🏷️ Auto-tagging based on content
+- 🖼️ Featured image extraction
+- 📝 Custom templates for different post types

@@ -375,3 +375,8 @@ function normalizeFirecrawlPayload(payload) {
     };
   }
 
+  const documents = [];
+  const visited = new Set();
+  const addDoc = (doc) => {
+    if (!doc || typeof doc !== "object") return;
+    if (visited.has(doc)) return;
