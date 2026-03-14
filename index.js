@@ -380,3 +380,8 @@ function normalizeFirecrawlPayload(payload) {
   const addDoc = (doc) => {
     if (!doc || typeof doc !== "object") return;
     if (visited.has(doc)) return;
+    visited.add(doc);
+    documents.push(doc);
+  };
+
+  const arrayKeys = ["data", "documents", "results", "items", "records"];
