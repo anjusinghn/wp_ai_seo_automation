@@ -365,3 +365,8 @@ function normalizeFirecrawlPayload(payload) {
     return {
       summary: "",
       markdown: "",
+      html: "",
+      title: "",
+      description: "",
+      rawText: "",
+      metadata: null,
