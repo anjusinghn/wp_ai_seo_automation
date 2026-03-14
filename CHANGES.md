@@ -383,3 +383,7 @@ If you were using the old version:
 - 📈 Monitoring and metrics
 
 ## Troubleshooting
+
+See [README.md](README.md) and [QUICKSTART.md](QUICKSTART.md) for detailed troubleshooting guides.
+
+
