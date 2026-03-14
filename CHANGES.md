@@ -378,3 +378,8 @@ If you were using the old version:
 - 🏷️ Auto-tagging based on content
 - 🖼️ Featured image extraction
 - 📝 Custom templates for different post types
+- 🔐 API authentication for endpoints
+- 🐳 Docker Compose setup
+- 📈 Monitoring and metrics
+
+## Troubleshooting
