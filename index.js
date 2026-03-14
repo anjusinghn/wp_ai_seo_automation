@@ -370,3 +370,8 @@ function normalizeFirecrawlPayload(payload) {
       description: "",
       rawText: "",
       metadata: null,
+      links: [],
+      documents: [],
+    };
+  }
+
