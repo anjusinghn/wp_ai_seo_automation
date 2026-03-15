@@ -395,3 +395,8 @@ function normalizeFirecrawlPayload(payload) {
   }
 
   if (payload.document && typeof payload.document === "object") addDoc(payload.document);
+  if (documents.length === 0) addDoc(payload);
+
+  const primary = documents[0] || {};
+  const summary = pickFirstNonEmpty(primary.summary, payload.summary);
+  const markdown = pickFirstNonEmpty(primary.markdown, payload.markdown);
