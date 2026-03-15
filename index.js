@@ -410,3 +410,8 @@ function normalizeFirecrawlPayload(payload) {
     primary.content,
     primary.text,
     payload.rawText,
+    payload.raw_text,
+    payload.raw,
+    payload.content,
+    payload.text,
+  );
