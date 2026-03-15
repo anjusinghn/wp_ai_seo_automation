@@ -405,3 +405,8 @@ function normalizeFirecrawlPayload(payload) {
   const description = pickFirstNonEmpty(primary.description, payload.description);
   const rawText = pickFirstNonEmpty(
     primary.rawText,
+    primary.raw_text,
+    primary.raw,
+    primary.content,
+    primary.text,
+    payload.rawText,
