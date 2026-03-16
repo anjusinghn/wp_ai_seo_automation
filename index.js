@@ -441,3 +441,8 @@ async function firecrawlSummaryViaCrawl(env, url) {
     if (
       scraped.summary.length > 0 ||
       scraped.links.length > 0 ||
+      scraped.html.length > 0 ||
+      scraped.rawText.length > 0
+    ) {
+      console.log(`firecrawlSummaryViaCrawl: using scrape for ${url}`);
+      return scraped;
