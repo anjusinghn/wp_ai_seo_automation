@@ -415,3 +415,8 @@ function normalizeFirecrawlPayload(payload) {
     payload.content,
     payload.text,
   );
+
+  const links = Array.isArray(primary.links)
+    ? primary.links
+    : Array.isArray(payload.links)
+    ? payload.links
