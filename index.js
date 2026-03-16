@@ -425,3 +425,14 @@ function normalizeFirecrawlPayload(payload) {
   return {
     summary: summary || "",
     markdown: markdown || "",
+    html: html || "",
+    title: title || "",
+    description: description || "",
+    rawText: rawText || "",
+    metadata: primary.metadata || payload.metadata || null,
+    links,
+    documents,
+  };
+}
+
+async function firecrawlSummaryViaCrawl(env, url) {
