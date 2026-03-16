@@ -420,3 +420,8 @@ function normalizeFirecrawlPayload(payload) {
     ? primary.links
     : Array.isArray(payload.links)
     ? payload.links
+    : [];
+
+  return {
+    summary: summary || "",
+    markdown: markdown || "",
