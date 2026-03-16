@@ -436,3 +436,8 @@ function normalizeFirecrawlPayload(payload) {
 }
 
 async function firecrawlSummaryViaCrawl(env, url) {
+  try {
+    const scraped = await firecrawlScrape(env, url, { formats: ["summary", "html", "links"] });
+    if (
+      scraped.summary.length > 0 ||
+      scraped.links.length > 0 ||
