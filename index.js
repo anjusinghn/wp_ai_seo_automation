@@ -446,3 +446,8 @@ async function firecrawlSummaryViaCrawl(env, url) {
     ) {
       console.log(`firecrawlSummaryViaCrawl: using scrape for ${url}`);
       return scraped;
+    }
+  } catch (err) {
+    const msg = String(err?.message || err);
+    if (msg.toLowerCase().includes("not permitted")) throw err;
+    console.warn(`firecrawlSummaryViaCrawl: scrape failed (${msg}); falling back to crawl`);
