@@ -456,3 +456,8 @@ async function firecrawlSummaryViaCrawl(env, url) {
   const started = await firecrawlStartCrawl(env, url);
   if (Array.isArray(started.data) && started.data.length > 0) {
     console.log(`firecrawlSummaryViaCrawl: immediate crawl data for ${url}`);
+    return normalizeFirecrawlPayload(started);
+  }
+
+  const jobId = started.id || started.jobId || started.crawlId;
+  if (!jobId) throw new Error("Firecrawl crawl did not return data or a job id");
