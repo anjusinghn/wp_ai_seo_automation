@@ -461,3 +461,8 @@ async function firecrawlSummaryViaCrawl(env, url) {
 
   const jobId = started.id || started.jobId || started.crawlId;
   if (!jobId) throw new Error("Firecrawl crawl did not return data or a job id");
+  const polled = await firecrawlPoll(env, jobId);
+  console.log(`firecrawlSummaryViaCrawl: polled crawl data for ${url}`);
+  return normalizeFirecrawlPayload(polled);
+}
+
