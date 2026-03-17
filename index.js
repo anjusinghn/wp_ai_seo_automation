@@ -466,3 +466,13 @@ async function firecrawlSummaryViaCrawl(env, url) {
   return normalizeFirecrawlPayload(polled);
 }
 
+// ----- Hacker News harvesting ----------------------------------------------
+async function fetchHackerNewsArticles(env, limit = 16) {
+  console.log("Fetching The Hacker News homepage...");
+  const aggregator = createLinkAggregator(normalizeHackerNewsLinks);
+  const scrape = await firecrawlSummaryViaCrawl(env, "https://thehackernews.com/");
+  harvestHackerNewsScrape(scrape, aggregator);
+  const links = aggregator
+    .all()
+    .filter((item) => {
+      try {
