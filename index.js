@@ -476,3 +476,8 @@ async function fetchHackerNewsArticles(env, limit = 16) {
     .all()
     .filter((item) => {
       try {
+        const path = new URL(item.url).pathname.toLowerCase();
+        return /\d{4}\/\d{2}\//.test(path);
+      } catch (_) {
+        return false;
+      }
