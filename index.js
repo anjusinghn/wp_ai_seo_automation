@@ -501,3 +501,13 @@ async function selectHackerNewsArticle(env, { url, index } = {}) {
 
   const articles = await fetchHackerNewsArticles(env);
   const shortlist = articles.slice(0, Math.min(4, articles.length));
+  if (shortlist.length === 0) throw new Error("No Hacker News articles available to select");
+
+  let chosen;
+  if (typeof index === "number" && index >= 0 && index < shortlist.length) {
+    chosen = shortlist[index];
+  } else {
+    chosen = shortlist[Math.floor(Math.random() * shortlist.length)];
+  }
+
+  return chosen;
