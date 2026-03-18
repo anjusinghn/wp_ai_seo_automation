@@ -526,3 +526,8 @@ async function groqExpandToBlog(env, { sourceTitle, sourceUrl, summaryText }) {
   const { groqApiKey, groqModel } = getConfig(env);
   const systemPrompt = `You are a security analyst and technical writer.
 Write a precise, well-structured cybersecurity blog post in valid HTML based on a source summary.
+Sections:
+<h2>TLDR</h2> two lines
+<h2>What happened</h2>
+<h2>Why it matters</h2>
+<h2>Who is affected</h2>
