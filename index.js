@@ -496,3 +496,8 @@ async function selectHackerNewsArticle(env, { url, index } = {}) {
       requireHtmlExtension: true,
     });
     if (!normalized) throw new Error(`Provided URL is not a valid Hacker News article: ${url}`);
+    return { url: normalized, title: deriveTitleFromUrl(normalized, "The Hacker News Article") };
+  }
+
+  const articles = await fetchHackerNewsArticles(env);
+  const shortlist = articles.slice(0, Math.min(4, articles.length));
