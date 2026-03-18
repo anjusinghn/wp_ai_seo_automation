@@ -481,3 +481,8 @@ async function fetchHackerNewsArticles(env, limit = 16) {
       } catch (_) {
         return false;
       }
+    })
+    .slice(0, limit);
+
+  if (links.length === 0) throw new Error("No article links found on The Hacker News homepage");
+  console.log(`Collected ${links.length} Hacker News article links`);
