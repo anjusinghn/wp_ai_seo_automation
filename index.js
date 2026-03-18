@@ -511,3 +511,8 @@ async function selectHackerNewsArticle(env, { url, index } = {}) {
   }
 
   return chosen;
+}
+
+async function summarizeArticle(env, url) {
+  const article = await firecrawlSummaryViaCrawl(env, url);
+  const summaryText = pickFirstNonEmpty(article.summary, article.markdown, article.rawText);
