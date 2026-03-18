@@ -491,3 +491,8 @@ async function fetchHackerNewsArticles(env, limit = 16) {
 
 async function selectHackerNewsArticle(env, { url, index } = {}) {
   if (url) {
+    const normalized = normalizeDomainArticleUrl(url, {
+      domain: "https://thehackernews.com/",
+      requireHtmlExtension: true,
+    });
+    if (!normalized) throw new Error(`Provided URL is not a valid Hacker News article: ${url}`);
