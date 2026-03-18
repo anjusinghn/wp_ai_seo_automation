@@ -516,3 +516,8 @@ async function selectHackerNewsArticle(env, { url, index } = {}) {
 async function summarizeArticle(env, url) {
   const article = await firecrawlSummaryViaCrawl(env, url);
   const summaryText = pickFirstNonEmpty(article.summary, article.markdown, article.rawText);
+  if (!summaryText) throw new Error(`Failed to extract summary from ${url}`);
+  const articleTitle = pickFirstNonEmpty(article.title, deriveTitleFromUrl(url));
+  return { summaryText, articleTitle };
+}
+
