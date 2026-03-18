@@ -521,3 +521,8 @@ async function summarizeArticle(env, url) {
   return { summaryText, articleTitle };
 }
 
+// ----- Groq expansion -------------------------------------------------------
+async function groqExpandToBlog(env, { sourceTitle, sourceUrl, summaryText }) {
+  const { groqApiKey, groqModel } = getConfig(env);
+  const systemPrompt = `You are a security analyst and technical writer.
+Write a precise, well-structured cybersecurity blog post in valid HTML based on a source summary.
