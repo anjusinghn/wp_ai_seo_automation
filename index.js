@@ -546,3 +546,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
 
   const payload = {
     model: groqModel,
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
+    temperature: 0.3,
