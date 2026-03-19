@@ -541,3 +541,8 @@ Source url: ${sourceUrl}
 
 Source summary:
 ${summaryText}
+
+Write the post now in clean HTML. Use h2 for section headings and lists where useful.`;
+
+  const payload = {
+    model: groqModel,
