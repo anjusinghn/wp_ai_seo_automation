@@ -531,3 +531,8 @@ Sections:
 <h2>What happened</h2>
 <h2>Why it matters</h2>
 <h2>Who is affected</h2>
+<h2>How to check exposure</h2>
+<h2>Fast mitigation</h2>
+Rules: produce 2500 to 3000 words, short sentences, confident tone, no hype, and do not include a References heading.
+Return compact JSON (single line, no code fences) with keys: "title" (an original headline, not copied from the source), "hook" (25 to 40 word teaser written by you), and "html" (the article body wrapped in HTML).`;
+
