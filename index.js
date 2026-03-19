@@ -551,3 +551,13 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
       { role: "user", content: userPrompt },
     ],
     temperature: 0.3,
+  };
+
+  let lastErrorSnippet = "";
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${groqApiKey}`,
+        "Content-Type": "application/json",
+      },
