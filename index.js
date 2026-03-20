@@ -581,3 +581,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
       throw new Error(`Groq ${res.status} ${snippet}`);
     }
 
+    const json = JSON.parse(text);
+    let content = json.choices?.[0]?.message?.content?.trim();
+    if (!content) throw new Error("Groq returned empty content");
+
+    if (content.startsWith("```")) {
