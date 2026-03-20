@@ -586,3 +586,13 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
     if (!content) throw new Error("Groq returned empty content");
 
     if (content.startsWith("```")) {
+      content = content.replace(/^```[a-zA-Z]*\n?/, "").replace(/```$/, "").trim();
+    }
+
+    let parsed;
+    try {
+      parsed = JSON.parse(content);
+    } catch (_) {
+      const firstBrace = content.indexOf("{");
+      const lastBrace = content.lastIndexOf("}");
+      if (firstBrace !== -1 && lastBrace > firstBrace) {
