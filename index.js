@@ -566,3 +566,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
     const text = await res.text();
     if (!res.ok) {
       const lowered = text.toLowerCase();
+      const snippet = text.length > 300 ? `${text.slice(0, 300)}…` : text;
+      lastErrorSnippet = snippet;
+      if (res.status === 400 && lowered.includes("model_decommissioned")) {
+        throw new Error(
+          `Groq model '${groqModel}' has been decommissioned. Update GROQ_MODEL. Snippet: ${snippet}`,
