@@ -561,3 +561,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
         Authorization: `Bearer ${groqApiKey}`,
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(payload),
+    });
+    const text = await res.text();
+    if (!res.ok) {
+      const lowered = text.toLowerCase();
