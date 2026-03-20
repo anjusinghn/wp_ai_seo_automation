@@ -601,3 +601,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
         throw new Error(`Groq response not JSON: ${content}`);
       }
     }
+
+    const title = pickFirstNonEmpty(parsed.title, parsed.headline, sourceTitle)?.slice(0, 120);
+    const hook = pickFirstNonEmpty(parsed.hook, parsed.description, parsed.preview);
+    const html = pickFirstNonEmpty(parsed.html, parsed.body, parsed.content);
+
