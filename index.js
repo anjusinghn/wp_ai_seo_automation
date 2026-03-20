@@ -596,3 +596,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
       const firstBrace = content.indexOf("{");
       const lastBrace = content.lastIndexOf("}");
       if (firstBrace !== -1 && lastBrace > firstBrace) {
+        parsed = JSON.parse(content.slice(firstBrace, lastBrace + 1));
+      } else {
+        throw new Error(`Groq response not JSON: ${content}`);
+      }
+    }
