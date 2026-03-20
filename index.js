@@ -571,3 +571,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
       if (res.status === 400 && lowered.includes("model_decommissioned")) {
         throw new Error(
           `Groq model '${groqModel}' has been decommissioned. Update GROQ_MODEL. Snippet: ${snippet}`,
+        );
+      }
+      if (res.status >= 500 && attempt < 3) {
+        console.warn(`Groq ${res.status} attempt ${attempt}; retrying...`);
+        await sleep(1000 * attempt);
