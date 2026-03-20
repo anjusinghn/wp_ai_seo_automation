@@ -576,3 +576,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
       if (res.status >= 500 && attempt < 3) {
         console.warn(`Groq ${res.status} attempt ${attempt}; retrying...`);
         await sleep(1000 * attempt);
+        continue;
+      }
+      throw new Error(`Groq ${res.status} ${snippet}`);
+    }
+
