@@ -606,3 +606,8 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
     const hook = pickFirstNonEmpty(parsed.hook, parsed.description, parsed.preview);
     const html = pickFirstNonEmpty(parsed.html, parsed.body, parsed.content);
 
+    if (!title) throw new Error("Groq JSON missing title");
+    if (!hook) throw new Error("Groq JSON missing hook");
+    if (!html) throw new Error("Groq JSON missing html");
+
+    return { title, hook, html };
