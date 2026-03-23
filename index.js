@@ -621,3 +621,8 @@ function basicAuthHeader(user, pass) {
   if (typeof btoa === "function") {
     return `Basic ${btoa(`${user}:${pass}`)}`;
   }
+  if (typeof Buffer !== "undefined") {
+    return `Basic ${Buffer.from(`${user}:${pass}`).toString("base64")}`;
+  }
+  throw new Error("No base64 encoder available for basic auth");
+}
