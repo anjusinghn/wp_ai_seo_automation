@@ -646,3 +646,9 @@ async function wpCreatePost(env, { title, html, excerpt, status = "publish" }) {
       excerpt: excerpt || "",
     }),
   });
+  const text = await res.text();
+  if (!res.ok) {
+    const snippet = text.slice(0, 400);
+    if (res.status === 403) {
+      throw new Error(
+        `WP create 403 (possible Cloudflare or auth block) ${snippet}. Verify WordPress application password access for this automation.`,
