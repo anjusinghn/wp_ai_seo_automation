@@ -631,3 +631,8 @@ async function wpCreatePost(env, { title, html, excerpt, status = "publish" }) {
   const { wpSiteUrl, wpUser, wpPassword, userAgent } = getConfig(env);
   const base = wpSiteUrl.replace(/\/+$/, "");
   const endpoint = `${base}/wp-json/wp/v2/posts`;
+  const res = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      Authorization: basicAuthHeader(wpUser, wpPassword),
+      "Content-Type": "application/json",
