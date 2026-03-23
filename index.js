@@ -636,3 +636,8 @@ async function wpCreatePost(env, { title, html, excerpt, status = "publish" }) {
     headers: {
       Authorization: basicAuthHeader(wpUser, wpPassword),
       "Content-Type": "application/json",
+      "User-Agent": userAgent,
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      title,
