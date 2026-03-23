@@ -641,3 +641,8 @@ async function wpCreatePost(env, { title, html, excerpt, status = "publish" }) {
     },
     body: JSON.stringify({
       title,
+      status,
+      content: html,
+      excerpt: excerpt || "",
+    }),
+  });
