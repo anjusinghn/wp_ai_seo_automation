@@ -611,3 +611,13 @@ Write the post now in clean HTML. Use h2 for section headings and lists where us
     if (!html) throw new Error("Groq JSON missing html");
 
     return { title, hook, html };
+  }
+
+  throw new Error(`Groq failed after retries: ${lastErrorSnippet}`);
+}
+
+// ----- WordPress publishing --------------------------------------------------
+function basicAuthHeader(user, pass) {
+  if (typeof btoa === "function") {
+    return `Basic ${btoa(`${user}:${pass}`)}`;
+  }
