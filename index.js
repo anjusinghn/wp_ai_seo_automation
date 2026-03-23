@@ -626,3 +626,8 @@ function basicAuthHeader(user, pass) {
   }
   throw new Error("No base64 encoder available for basic auth");
 }
+
+async function wpCreatePost(env, { title, html, excerpt, status = "publish" }) {
+  const { wpSiteUrl, wpUser, wpPassword, userAgent } = getConfig(env);
+  const base = wpSiteUrl.replace(/\/+$/, "");
+  const endpoint = `${base}/wp-json/wp/v2/posts`;
