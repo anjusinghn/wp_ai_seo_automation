@@ -657,3 +657,13 @@ async function wpCreatePost(env, { title, html, excerpt, status = "publish" }) {
     throw new Error(`WP create ${res.status} ${snippet}`);
   }
   return JSON.parse(text);
+}
+
+// ----- publishing pipeline --------------------------------------------------
+async function performHackerNewsPublish(
+  env,
+  { url, index, publish = true, reason = "manual" } = {},
+) {
+  console.log(`\n=== Hacker News publish (${reason}) ===`);
+  const selected = await selectHackerNewsArticle(env, { url, index });
+  console.log(`Selected article: ${selected.title}\n${selected.url}`);
