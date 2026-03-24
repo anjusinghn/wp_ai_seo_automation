@@ -667,3 +667,8 @@ async function performHackerNewsPublish(
   console.log(`\n=== Hacker News publish (${reason}) ===`);
   const selected = await selectHackerNewsArticle(env, { url, index });
   console.log(`Selected article: ${selected.title}\n${selected.url}`);
+
+  const { summaryText, articleTitle } = await summarizeArticle(env, selected.url);
+  console.log(`Summary length: ${summaryText.length} characters`);
+
+  const { title, hook, html } = await groqExpandToBlog(env, {
