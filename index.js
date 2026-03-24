@@ -652,3 +652,8 @@ async function wpCreatePost(env, { title, html, excerpt, status = "publish" }) {
     if (res.status === 403) {
       throw new Error(
         `WP create 403 (possible Cloudflare or auth block) ${snippet}. Verify WordPress application password access for this automation.`,
+      );
+    }
+    throw new Error(`WP create ${res.status} ${snippet}`);
+  }
+  return JSON.parse(text);
