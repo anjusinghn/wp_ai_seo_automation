@@ -677,3 +677,8 @@ async function performHackerNewsPublish(
     summaryText,
   });
   console.log(`Generated blog title: ${title}`);
+
+  let post = null;
+  if (publish) {
+    post = await wpCreatePost(env, { title, html, excerpt: hook, status: "publish" });
+    console.log(`Published WordPress post ID ${post.id}`);
