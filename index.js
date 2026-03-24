@@ -672,3 +672,8 @@ async function performHackerNewsPublish(
   console.log(`Summary length: ${summaryText.length} characters`);
 
   const { title, hook, html } = await groqExpandToBlog(env, {
+    sourceTitle: articleTitle,
+    sourceUrl: selected.url,
+    summaryText,
+  });
+  console.log(`Generated blog title: ${title}`);
