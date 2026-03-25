@@ -682,3 +682,8 @@ async function performHackerNewsPublish(
   if (publish) {
     post = await wpCreatePost(env, { title, html, excerpt: hook, status: "publish" });
     console.log(`Published WordPress post ID ${post.id}`);
+  } else {
+    console.log("Preview mode: skipping WordPress publish");
+  }
+
+  return {
