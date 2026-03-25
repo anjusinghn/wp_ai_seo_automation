@@ -697,3 +697,13 @@ async function performHackerNewsPublish(
 }
 
 // ----- Durable Object state -------------------------------------------------
+async function getPublishState(env) {
+  if (!env.PUBLISH_STATE) throw new Error("Missing Durable Object binding PUBLISH_STATE");
+  const id = env.PUBLISH_STATE.idFromName("global");
+  const stub = env.PUBLISH_STATE.get(id);
+  const res = await stub.fetch("https://publish-state/get");
+  if (!res.ok) throw new Error(`Publish state get failed ${res.status}`);
+  const data = await res.json().catch(() => ({}));
+  return { stub, state: { ...DEFAULT_STATE, ...(data || {}) } };
+}
+
