@@ -732,3 +732,8 @@ async function performPublishWithLock(env, options = {}) {
 
   try {
     result = await performHackerNewsPublish(env, publishOptions);
+  } catch (err) {
+    error = err;
+  }
+
+  const finalState = { ...current, isPublishing: false };
