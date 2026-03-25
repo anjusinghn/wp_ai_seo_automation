@@ -692,3 +692,8 @@ async function performHackerNewsPublish(
     sourceTitle: articleTitle,
     generatedTitle: title,
     generatedHook: hook,
+    wordpressPost: publish ? { id: post.id, link: post.link, status: post.status } : null,
+  };
+}
+
+// ----- Durable Object state -------------------------------------------------
