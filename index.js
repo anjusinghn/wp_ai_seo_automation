@@ -687,3 +687,8 @@ async function performHackerNewsPublish(
   }
 
   return {
+    published: publish,
+    sourceUrl: selected.url,
+    sourceTitle: articleTitle,
+    generatedTitle: title,
+    generatedHook: hook,
