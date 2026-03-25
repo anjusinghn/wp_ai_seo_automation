@@ -727,3 +727,8 @@ async function performPublishWithLock(env, options = {}) {
 
   const publishFlag = publishOptions.publish !== false;
   const reason = publishOptions.reason || "manual";
+  let result = null;
+  let error = null;
+
+  try {
+    result = await performHackerNewsPublish(env, publishOptions);
