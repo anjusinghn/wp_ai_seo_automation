@@ -722,3 +722,8 @@ async function performPublishWithLock(env, options = {}) {
     : await getPublishState(env);
   const current = { ...DEFAULT_STATE, ...state };
 
+  if (current.isPublishing) throw new Error("Publish already in progress");
+  await savePublishState(stub, { ...current, isPublishing: true });
+
+  const publishFlag = publishOptions.publish !== false;
+  const reason = publishOptions.reason || "manual";
