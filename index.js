@@ -712,3 +712,8 @@ async function savePublishState(stub, state) {
     method: "POST",
     headers: JSON_HEADERS,
     body: JSON.stringify({ ...DEFAULT_STATE, ...state }),
+  });
+}
+
+async function performPublishWithLock(env, options = {}) {
+  const { stub: providedStub, state: providedState, ...publishOptions } = options;
