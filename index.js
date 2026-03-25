@@ -717,3 +717,8 @@ async function savePublishState(stub, state) {
 
 async function performPublishWithLock(env, options = {}) {
   const { stub: providedStub, state: providedState, ...publishOptions } = options;
+  const { stub, state } = providedStub && providedState
+    ? { stub: providedStub, state: providedState }
+    : await getPublishState(env);
+  const current = { ...DEFAULT_STATE, ...state };
+
