@@ -707,3 +707,8 @@ async function getPublishState(env) {
   return { stub, state: { ...DEFAULT_STATE, ...(data || {}) } };
 }
 
+async function savePublishState(stub, state) {
+  await stub.fetch("https://publish-state/set", {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ ...DEFAULT_STATE, ...state }),
