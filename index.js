@@ -777,3 +777,8 @@ async function runDailyPublish(env, { reason = "cron", force = false } = {}) {
 // ----- Hono app -------------------------------------------------------------
 const app = new Hono();
 
+app.get("/healthz", async (c) => {
+  const { state } = await getPublishState(c.env);
+  return c.json({ ok: true, state });
+});
+
