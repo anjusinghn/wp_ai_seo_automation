@@ -742,3 +742,13 @@ async function performPublishWithLock(env, options = {}) {
       ok: false,
       reason,
       completedAt: new Date().toISOString(),
+      error: String(error?.message || error),
+    };
+  } else if (result) {
+    const { dateKey } = getISTComponents();
+    if (publishFlag) {
+      finalState.lastPublishedDateIST = dateKey;
+    }
+    finalState.lastPublishResult = {
+      ok: true,
+      reason,
