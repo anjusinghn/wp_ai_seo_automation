@@ -757,3 +757,8 @@ async function performPublishWithLock(env, options = {}) {
     };
   }
 
+  await savePublishState(stub, finalState);
+
+  if (error) throw error;
+  return result;
+}
