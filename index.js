@@ -762,3 +762,8 @@ async function performPublishWithLock(env, options = {}) {
   if (error) throw error;
   return result;
 }
+
+async function runDailyPublish(env, { reason = "cron", force = false } = {}) {
+  const { stub, state } = await getPublishState(env);
+  const current = { ...DEFAULT_STATE, ...state };
+  const { dateKey } = getISTComponents();
