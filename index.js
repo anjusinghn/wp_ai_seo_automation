@@ -752,3 +752,8 @@ async function performPublishWithLock(env, options = {}) {
     finalState.lastPublishResult = {
       ok: true,
       reason,
+      completedAt: new Date().toISOString(),
+      ...result,
+    };
+  }
+
