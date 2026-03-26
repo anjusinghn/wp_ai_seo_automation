@@ -737,3 +737,8 @@ async function performPublishWithLock(env, options = {}) {
   }
 
   const finalState = { ...current, isPublishing: false };
+  if (error) {
+    finalState.lastPublishResult = {
+      ok: false,
+      reason,
+      completedAt: new Date().toISOString(),
