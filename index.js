@@ -767,3 +767,13 @@ async function runDailyPublish(env, { reason = "cron", force = false } = {}) {
   const { stub, state } = await getPublishState(env);
   const current = { ...DEFAULT_STATE, ...state };
   const { dateKey } = getISTComponents();
+  if (!force && current.lastPublishedDateIST === dateKey) {
+    console.log(`Daily publish already completed for ${dateKey} IST; skipping.`);
+    return { skipped: true };
+  }
+  return await performPublishWithLock(env, { publish: true, reason, stub, state: current });
+}
+
+// ----- Hono app -------------------------------------------------------------
+const app = new Hono();
+
