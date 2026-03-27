@@ -797,3 +797,8 @@ app.get("/hackernews-links", async (c) => {
   } catch (err) {
     console.error("Failed to fetch Hacker News links", err);
     return c.json({ ok: false, error: String(err?.message || err) }, 500);
+  }
+});
+
+app.post("/publish-hackernews", async (c) => {
+  try {
