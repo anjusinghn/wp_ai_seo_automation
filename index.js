@@ -782,3 +782,8 @@ app.get("/healthz", async (c) => {
   return c.json({ ok: true, state });
 });
 
+app.get("/publish-log", async (c) => {
+  const { state } = await getPublishState(c.env);
+  if (!state.lastPublishResult) {
+    return c.json({ ok: true, message: "No publish recorded yet" });
+  }
