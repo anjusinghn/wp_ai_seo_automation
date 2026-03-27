@@ -792,3 +792,8 @@ app.get("/publish-log", async (c) => {
 
 app.get("/hackernews-links", async (c) => {
   try {
+    const articles = await fetchHackerNewsArticles(c.env, 12);
+    return c.json({ ok: true, count: articles.length, articles });
+  } catch (err) {
+    console.error("Failed to fetch Hacker News links", err);
+    return c.json({ ok: false, error: String(err?.message || err) }, 500);
