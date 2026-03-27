@@ -787,3 +787,8 @@ app.get("/publish-log", async (c) => {
   if (!state.lastPublishResult) {
     return c.json({ ok: true, message: "No publish recorded yet" });
   }
+  return c.json({ ok: true, lastPublishResult: state.lastPublishResult });
+});
+
+app.get("/hackernews-links", async (c) => {
+  try {
