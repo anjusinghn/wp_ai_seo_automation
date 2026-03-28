@@ -827,3 +827,8 @@ app.post("/publish-hackernews", async (c) => {
 
 app.post("/publish-reset", async (c) => {
   const { stub } = await getPublishState(c.env);
+  await savePublishState(stub, { ...DEFAULT_STATE });
+  return c.json({ ok: true, message: "Publish state reset" });
+});
+
+// ----- Worker exports -------------------------------------------------------
