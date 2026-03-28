@@ -807,3 +807,13 @@ app.post("/publish-hackernews", async (c) => {
     const url = typeof body.url === "string" ? body.url : undefined;
     const index =
       typeof body.index === "number" && Number.isInteger(body.index) ? body.index : undefined;
+    const reason = publish ? "manual" : "preview";
+
+    const { stub, state } = await getPublishState(c.env);
+    const result = await performPublishWithLock(c.env, {
+      url,
+      index,
+      publish,
+      reason,
+      stub,
+      state,
