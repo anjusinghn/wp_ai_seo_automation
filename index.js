@@ -832,3 +832,8 @@ app.post("/publish-reset", async (c) => {
 });
 
 // ----- Worker exports -------------------------------------------------------
+export default {
+  fetch(request, env, ctx) {
+    return app.fetch(request, env, ctx);
+  },
+  async scheduled(event, env, ctx) {
