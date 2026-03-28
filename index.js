@@ -802,3 +802,8 @@ app.get("/hackernews-links", async (c) => {
 
 app.post("/publish-hackernews", async (c) => {
   try {
+    const body = await c.req.json().catch(() => ({}));
+    const publish = body.publish !== false;
+    const url = typeof body.url === "string" ? body.url : undefined;
+    const index =
+      typeof body.index === "number" && Number.isInteger(body.index) ? body.index : undefined;
