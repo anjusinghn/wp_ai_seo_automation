@@ -817,3 +817,8 @@ app.post("/publish-hackernews", async (c) => {
       reason,
       stub,
       state,
+    });
+    return c.json({ ok: true, result });
+  } catch (err) {
+    console.error("Manual publish failed", err);
+    return c.json({ ok: false, error: String(err?.message || err) }, 500);
