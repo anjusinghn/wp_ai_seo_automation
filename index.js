@@ -842,3 +842,8 @@ export default {
     } catch (err) {
       console.error("Scheduled publish failed", err);
     }
+  },
+};
+
+// ----- Durable Object -------------------------------------------------------
+export class PublishState {
