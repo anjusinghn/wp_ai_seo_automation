@@ -862,3 +862,8 @@ export class PublishState {
     if (url.pathname === "/set" && request.method === "POST") {
       const body = await request.json();
       await this.storage.put("state", { ...DEFAULT_STATE, ...body });
+      return new Response(JSON.stringify({ ok: true }), { headers: JSON_HEADERS });
+    }
+    return new Response("Not found", { status: 404 });
+  }
+}
