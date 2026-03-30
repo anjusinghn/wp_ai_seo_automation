@@ -837,3 +837,8 @@ export default {
     return app.fetch(request, env, ctx);
   },
   async scheduled(event, env, ctx) {
+    try {
+      await runDailyPublish(env, { reason: "cron" });
+    } catch (err) {
+      console.error("Scheduled publish failed", err);
+    }
