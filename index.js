@@ -847,3 +847,8 @@ export default {
 
 // ----- Durable Object -------------------------------------------------------
 export class PublishState {
+  constructor(state) {
+    this.storage = state.storage;
+  }
+
+  async fetch(request) {
