@@ -852,3 +852,13 @@ export class PublishState {
   }
 
   async fetch(request) {
+    const url = new URL(request.url);
+    if (url.pathname === "/get") {
+      const stored = (await this.storage.get("state")) || DEFAULT_STATE;
+      return new Response(JSON.stringify({ ...DEFAULT_STATE, ...stored }), {
+        headers: JSON_HEADERS,
+      });
+    }
+    if (url.pathname === "/set" && request.method === "POST") {
+      const body = await request.json();
+      await this.storage.put("state", { ...DEFAULT_STATE, ...body });
